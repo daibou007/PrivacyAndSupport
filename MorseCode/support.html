@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support – Morse Code Learner</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        body { max-width: 860px; margin: 50px auto; padding: 0 20px; line-height: 1.7; color: #333; }
+        h1 { color: #1a1a1a; margin-bottom: 8px; font-size: 30px; text-align: center; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 16px; }
+        h2 { color: #2c2c2c; margin: 36px 0 14px; font-size: 22px;
+             border-left: 4px solid #00C8C8; padding-left: 12px; }
+        h3 { color: #3a3a3a; margin: 22px 0 10px; font-size: 17px; }
+        p  { margin-bottom: 12px; font-size: 15px; }
+        ul, ol { margin-left: 24px; margin-bottom: 14px; }
+        li { margin-bottom: 8px; font-size: 15px; }
+        a  { color: #00A0A0; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .contact-box { background: #f0fafa; border: 1px solid #b0e8e8;
+                       padding: 22px 24px; border-radius: 10px; margin: 20px 0; }
+        .contact-box p { margin-bottom: 6px; }
+        .step { background: #fafafa; border: 1px solid #eee; border-radius: 8px;
+                padding: 14px 18px; margin-bottom: 12px; }
+        .step strong { color: #00A0A0; }
+        .tip { background: #f0fafa; border-left: 4px solid #00C8C8;
+               padding: 10px 16px; border-radius: 4px; margin: 12px 0; font-size: 14px; }
+        .faq-q { font-weight: 600; color: #1a1a1a; margin-top: 18px; margin-bottom: 6px; }
+        hr { border: none; border-top: 1px solid #eee; margin: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <h1>Morse Code Learner Support</h1>
+    <p class="subtitle">Learn Morse Code Through an Interactive Binary Decision Tree</p>
+
+    <!-- CONTACT -->
+    <h2>Contact Us</h2>
+    <div class="contact-box">
+        <p>Need help or have feedback? We're here to help.</p>
+        <p><strong>Email: <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a></strong></p>
+        <p style="color:#666; font-size:14px;">We typically respond within 24 hours on business days (Mon – Fri).</p>
+    </div>
+
+    <hr>
+
+    <!-- USER GUIDE -->
+    <h2>How to Use Morse Code Learner</h2>
+
+    <h3>🌳 The Morse Tab — Learn with the Decision Tree</h3>
+    <p>The Morse tab is the core of the app. A binary decision tree is displayed on screen — each branch represents a DOT (left) or DASH (right) choice.</p>
+    <div class="step"><strong>Step 1</strong> — Tap <em>DOT</em> or <em>DASH</em> to walk down the tree. Your active path highlights in real time.</div>
+    <div class="step"><strong>Step 2</strong> — When your sequence matches a letter, the letter is highlighted and your level advances automatically.</div>
+    <div class="step"><strong>Step 3</strong> — The tree resets after a match (or after 4 signals with no match) so you can try the next letter.</div>
+    <div class="tip">💡 <strong>Tip:</strong> The level badge at the top shows your current level (1–26) and the target letter. Master all 26 letters to complete the course.</div>
+
+    <h3>🏋️ The Train Tab — Six Practice Modes</h3>
+    <p>Tap the chevron next to the mode name to switch between modes:</p>
+    <ul>
+        <li><strong>Teach</strong> — Browse all 26 letters with guided demos. Tap <em>Play Pattern</em> to hear and see a letter's Morse pattern, then practice it yourself.</li>
+        <li><strong>Rhythm</strong> — A letter's pattern plays automatically. Listen, then reproduce the exact dot/dash sequence to score points.</li>
+        <li><strong>Game</strong> — A timed speed challenge. Encode as many randomly chosen letters as possible before the timer runs out.</li>
+        <li><strong>Word</strong> — Encode a random word letter by letter. Green = correct, red = wrong for each letter.</li>
+        <li><strong>Sentence</strong> — Like Word mode but with a full sentence, advancing word by word.</li>
+    </ul>
+
+    <h3>🏆 The Achieve Tab — Achievements &amp; Stats</h3>
+    <p>View your 13 achievements and overall statistics including total signals transmitted, perfect rhythm rounds, current daily streak, and longest streak. Locked achievements are shown in grey; unlocked ones display the date they were earned.</p>
+
+    <h3>⚙️ The Settings Tab — Customize Your Experience</h3>
+    <ul>
+        <li><strong>Sound Effects</strong> — Toggle the 700 Hz sine-wave tone played on each signal.</li>
+        <li><strong>Screen Flash</strong> — Toggle a white screen flash on each signal.</li>
+        <li><strong>Flashlight</strong> — Toggle the rear camera flashlight synced to each signal.</li>
+        <li><strong>Indicator Light Mode</strong> — Choose Red-Green or Red-Blue colors for the on-screen signal indicator.</li>
+        <li><strong>Theme</strong> — Light, Dark, or System (follows iOS appearance setting).</li>
+        <li><strong>Mirror Tree Layout</strong> — Flip the tree horizontally (DOT on right, DASH on left).</li>
+        <li><strong>Input Mode</strong> — Dual Button (separate DOT and DASH buttons) or Single Button (tap for dot, hold for dash).</li>
+        <li><strong>Code Spacing</strong> — Adjust the gap between signals in demo playback (0.5× to 3.0×).</li>
+    </ul>
+
+    <h3>📖 Single-Button Input Mode</h3>
+    <p>In Single Button mode, one large TAP button replaces the DOT/DASH pair:</p>
+    <ul>
+        <li>A <strong>short tap</strong> (shorter than the Long Press Threshold) sends a DOT.</li>
+        <li>A <strong>long press</strong> (longer than the threshold) sends a DASH.</li>
+        <li>Adjust the threshold, dot duration, and dash duration in Settings → Input.</li>
+    </ul>
+
+    <hr>
+
+    <!-- FAQ -->
+    <h2>Frequently Asked Questions</h2>
+
+    <p class="faq-q">Why does the app ask for camera permission?</p>
+    <p>Camera permission is used exclusively to control the rear flashlight. The flashlight pulses in sync with your Morse signals, providing real-world transmitter feedback. The app never captures, records, or accesses photos or video. You can disable Flashlight in Settings without revoking the permission, or revoke it entirely in iOS Settings → Privacy &amp; Security → Camera.</p>
+
+    <p class="faq-q">There is no sound. What should I check?</p>
+    <p>First, make sure Sound Effects is enabled in Settings. Then check that your device is not in Silent Mode (the physical mute switch on the side of the phone). The app plays audio using the Playback category, which respects the Silent switch. Also ensure your device volume is turned up.</p>
+
+    <p class="faq-q">How does the level system work?</p>
+    <p>The app teaches Morse code one letter at a time, starting from A and progressing to Z. When you correctly input the Morse code for the current target letter on the Morse tab, your level advances automatically. You can also practice any letter freely in Teach mode without affecting your level.</p>
+
+    <p class="faq-q">How do I unlock achievements?</p>
+    <p>Achievements unlock automatically when you meet their conditions — for example, transmitting 100 signals, reaching Level 10, completing a 7-day streak, or scoring 5 perfect Rhythm rounds. Check the Achieve tab to see your progress.</p>
+
+    <p class="faq-q">What is the daily streak?</p>
+    <p>Your streak counts how many consecutive days you have used the app. Transmitting at least one signal on a given day keeps your streak alive. Missing a day resets it to 1.</p>
+
+    <p class="faq-q">Can I use Morse Code Learner offline?</p>
+    <p>Yes — the app works completely offline. All audio synthesis, tree visualization, training modes, and progress tracking function without an internet connection.</p>
+
+    <p class="faq-q">How do I reset my progress or settings?</p>
+    <p>Go to Settings → Data. Tap <em>Clear Learning Progress</em> to reset your level back to 1, or <em>Restore Default Settings</em> to reset all preferences. These actions cannot be undone.</p>
+
+    <p class="faq-q">Is the Morse code in this app accurate?</p>
+    <p>Yes. The app uses the standard International Morse Code alphabet (ITU-R M.1677-1) covering all 26 letters A–Z.</p>
+
+    <p class="faq-q">The app crashed or isn't working properly. What should I do?</p>
+    <p>Try force-quitting and relaunching the app. If the issue persists, please email us at <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a> with a description of the problem, your device model, and your iOS version.</p>
+
+    <hr>
+
+    <!-- FOOTER -->
+    <h2>Still Need Help?</h2>
+    <div class="contact-box">
+        <p>We're happy to help with any questions or feedback.</p>
+        <p><strong>Email: <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a></strong></p>
+        <p style="color:#666; font-size:14px;">Response time: within 24 hours on business days.</p>
+    </div>
+
+</body>
+</html>
