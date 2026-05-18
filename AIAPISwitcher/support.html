@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support – AI API Switcher</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        body { max-width: 860px; margin: 50px auto; padding: 0 20px; line-height: 1.7; color: #333; }
+        h1 { color: #1a1a1a; margin-bottom: 8px; font-size: 30px; text-align: center; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 16px; }
+        h2 { color: #2c2c2c; margin: 36px 0 14px; font-size: 22px; border-left: 4px solid #4A90FF; padding-left: 12px; }
+        h3 { color: #3a3a3a; margin: 22px 0 10px; font-size: 17px; }
+        p  { margin-bottom: 12px; font-size: 15px; }
+        ul, ol { margin-left: 24px; margin-bottom: 14px; }
+        li { margin-bottom: 8px; font-size: 15px; }
+        a  { color: #4A90FF; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .contact-box { background: #f0f4ff; border: 1px solid #c8d8ff; padding: 22px 24px; border-radius: 10px; margin: 20px 0; }
+        .contact-box p { margin-bottom: 6px; }
+        .step { background: #fafafa; border: 1px solid #eee; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
+        .step strong { color: #4A90FF; }
+        .tip { background: #fffbe6; border-left: 4px solid #f0c040; padding: 10px 16px; border-radius: 4px; margin: 12px 0; font-size: 14px; }
+        .faq-q { font-weight: 600; color: #1a1a1a; margin-top: 18px; margin-bottom: 6px; }
+        hr { border: none; border-top: 1px solid #eee; margin: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <h1>AI API Switcher Support</h1>
+    <p class="subtitle">The ultimate macOS native tool to manage Claude Code environments</p>
+
+    <!-- CONTACT -->
+    <h2>Contact Us</h2>
+    <div class="contact-box">
+        <p>Need help or have feedback? We're here to help.</p>
+        <p><strong>Email: <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a></strong></p>
+        <p style="color:#666; font-size:14px;">We typically respond within 24 hours on business days.</p>
+    </div>
+
+    <hr>
+
+    <!-- USER GUIDE -->
+    <h2>How to Use AI API Switcher</h2>
+
+    <h3>1. Managing Environments</h3>
+    <div class="step"><strong>Create</strong> — Click "Create New Environment" to start a blank profile.</div>
+    <div class="step"><strong>Import</strong> — Use "File -> Import JSON" to load existing configuration files.</div>
+    <div class="step"><strong>Clone & Rename</strong> — Right-click on any environment in the sidebar to clone or rename it.</div>
+
+    <h3>2. Configuring API Endpoints</h3>
+    <p>In the <strong>Settings</strong> tab, define the Claude Code configuration (JSON format). You only need to define the <code>env</code> node. When applied, the app safely merges this node into your local <code>~/.claude/settings.json</code> file.</p>
+
+    <h3>3. Proxy and Router Support</h3>
+    <p>In the <strong>Proxies</strong> tab, you can enable:</p>
+    <ul>
+        <li><strong>Remote Network Proxy (Gost):</strong> For bypassing network restrictions. The app runs Gost silently in the background and can auto-kill conflicting ports.</li>
+        <li><strong>Local API Router (CCR):</strong> Claude Code Router translates API formats (like Gemini/DeepSeek to Anthropic API) locally.</li>
+    </ul>
+    <div class="tip"> <strong>Tip:</strong> Ensure <code>gost</code> and <code>claude-code-router</code> are installed on your Mac and accessible in your system PATH. The app will show a green checkmark when they are detected.</div>
+
+    <hr>
+
+    <!-- FAQ -->
+    <h2>Frequently Asked Questions</h2>
+
+    <p class="faq-q">Why does the app need file access permissions?</p>
+    <p>macOS App Sandbox requires explicit permissions to modify files outside its container. AI API Switcher needs access to <code>~/.claude/settings.json</code> to apply your API configurations.</p>
+
+    <p class="faq-q">Where are my configurations saved?</p>
+    <p>Your environment profiles are securely saved locally on your Mac at <code>~/Library/Application Support/AIApiSwitcher/envs.json</code>. No data is sent to the cloud.</p>
+
+    <p class="faq-q">What does the "Export" button do?</p>
+    <p>The Export tab allows you to define terminal environment variables (like <code>export ANTHROPIC_API_KEY=...</code>). When applied, the app can inject these into a new Terminal window for immediate use.</p>
+
+    <p class="faq-q">Is this app affiliated with Anthropic?</p>
+    <p>No. AI API Switcher is an independent third-party tool designed to enhance the developer experience. "Claude Code" is a trademark of Anthropic, PBC.</p>
+
+</body>
+</html>
