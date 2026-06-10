@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support – PitchScope</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        body { max-width: 860px; margin: 50px auto; padding: 0 20px; line-height: 1.7; color: #333; }
+        h1 { color: #1a1a1a; margin-bottom: 8px; font-size: 30px; text-align: center; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 16px; }
+        h2 { color: #2c2c2c; margin: 36px 0 14px; font-size: 22px;
+             border-left: 4px solid #4A90FF; padding-left: 12px; }
+        h3 { color: #3a3a3a; margin: 22px 0 10px; font-size: 17px; }
+        p  { margin-bottom: 12px; font-size: 15px; }
+        ul, ol { margin-left: 24px; margin-bottom: 14px; }
+        li { margin-bottom: 8px; font-size: 15px; }
+        a  { color: #4A90FF; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .contact-box { background: #f0f4ff; border: 1px solid #c8d8ff;
+                       padding: 22px 24px; border-radius: 10px; margin: 20px 0; }
+        .contact-box p { margin-bottom: 6px; }
+        .step { background: #fafafa; border: 1px solid #eee; border-radius: 8px;
+                padding: 14px 18px; margin-bottom: 12px; }
+        .step strong { color: #4A90FF; }
+        .tip { background: #fffbe6; border-left: 4px solid #f0c040;
+               padding: 10px 16px; border-radius: 4px; margin: 12px 0; font-size: 14px; }
+        .faq-q { font-weight: 600; color: #1a1a1a; margin-top: 18px; margin-bottom: 6px; }
+        hr { border: none; border-top: 1px solid #eee; margin: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <h1>PitchScope Support</h1>
+    <p class="subtitle">Real-Time Pitch Detection &amp; Audio Analysis</p>
+
+    <!-- CONTACT -->
+    <h2>Contact Us</h2>
+    <div class="contact-box">
+        <p>Need help or have feedback? We're here to help.</p>
+        <p><strong>Email: <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a></strong></p>
+        <p style="color:#666; font-size:14px;">We typically respond within 24 hours on business days (Mon – Fri).</p>
+    </div>
+
+    <hr>
+
+    <!-- USER GUIDE -->
+    <h2>How to Use PitchScope</h2>
+
+    <!-- 1. Getting Started -->
+    <h3>🎤 1. Getting Started</h3>
+    <div class="step"><strong>Step 1</strong> — Launch PitchScope and allow microphone access when prompted. The app needs microphone permission to detect and analyze pitch in real time.</div>
+    <div class="step"><strong>Step 2</strong> — Once permission is granted, the app immediately begins analyzing audio from your device's built-in microphone.</div>
+    <div class="step"><strong>Step 3</strong> — Play a single note on your instrument or sing into the microphone. The display will show the detected frequency, note name, octave, and cent deviation in real time.</div>
+    <div class="tip">💡 <strong>Tip:</strong> For best results, use in a quiet environment and hold the device within 30 cm of the sound source.</div>
+
+    <!-- 2. Reading the Display -->
+    <h3>📊 2. Reading the Display</h3>
+    <ul>
+        <li><strong>Frequency (Hz)</strong> — The exact detected pitch frequency with 0.1 Hz resolution</li>
+        <li><strong>Note Name</strong> — The nearest musical note (C, C#, D, etc.)</li>
+        <li><strong>Octave Number</strong> — The octave of the detected note</li>
+        <li><strong>Cents Deviation</strong> — How sharp (+) or flat (−) your note is from the target</li>
+        <li><strong>Needle Gauge</strong> — Visual indicator of tuning accuracy with color-coded in-tune indicator</li>
+    </ul>
+
+    <!-- 3. Tuning Your Instrument -->
+    <h3>🎸 3. Tuning Your Instrument</h3>
+    <ol>
+        <li>Select your instrument preset in Settings (Chromatic, Guitar, Ukulele, Violin, Cello, Bass, Banjo, Mandolin, Piano).</li>
+        <li>Play a single, sustained note on your instrument.</li>
+        <li>Watch the cents needle — when it centers, you're in tune.</li>
+        <li>A green indicator means you're within the selected tolerance (±5, ±10, or ±20 cents).</li>
+        <li>Adjust your instrument until the needle centers and the indicator turns green.</li>
+    </ol>
+
+    <!-- 4. Temperament Systems -->
+    <h3>🎼 4. Choosing a Temperament</h3>
+    <p>PitchScope supports 15 temperament systems for different musical contexts:</p>
+    <ul>
+        <li><strong>Equal Temperament</strong> — Standard modern tuning (default)</li>
+        <li><strong>Pythagorean</strong> — Pure fifths, historical tuning</li>
+        <li><strong>Just Intonation</strong> — Pure intervals in keys of C, G, and D</li>
+        <li><strong>Meantone</strong> — Renaissance and Baroque tuning</li>
+        <li><strong>Werckmeister III, Kirnberger III</strong> — Well temperaments</li>
+    </ul>
+    <p>Change the temperament in <em>Settings</em> → <em>Temperament</em>.</p>
+
+    <!-- 5. Reference Pitch -->
+    <h3>🎵 5. Adjusting Reference Pitch (A4)</h3>
+    <p>The default A4 reference is 440 Hz. You can adjust this from 400–480 Hz in 0.1 Hz steps in Settings. This shifts all note frequencies proportionally.</p>
+    <div class="tip">💡 <strong>Common alternatives:</strong> 442 Hz (European orchestras), 443 Hz (some modern ensembles), 432 Hz (Verdi's A).</div>
+
+    <!-- 6. Spectrogram -->
+    <h3>🌊 6. Using the Spectrogram</h3>
+    <p>The spectrogram (waterfall display) shows a live visualization of harmonic overtones up to 10 kHz:</p>
+    <ul>
+        <li>The horizontal axis represents time</li>
+        <li>The vertical axis represents frequency</li>
+        <li>Color intensity represents amplitude</li>
+    </ul>
+    <p>Enable or disable the spectrogram in <em>Settings</em> → <em>Spectrogram</em>.</p>
+
+    <!-- 7. Frequency Graph -->
+    <h3>📈 7. Frequency Response Graph</h3>
+    <p>The frequency graph shows detected pitch stability over time. You can choose a display duration of 5, 10, or 30 seconds in Settings. This helps you visualize pitch consistency during sustained notes.</p>
+
+    <!-- 8. Session Recording -->
+    <h3>🔴 8. Recording Sessions</h3>
+    <ol>
+        <li>Tap the record button to start capturing pitch data over time.</li>
+        <li>Recordings include timestamped frequency data, note names, and cent deviations.</li>
+        <li>Tap stop when finished — recordings are saved locally on your device.</li>
+        <li>Export recordings as CSV for external analysis.</li>
+    </ol>
+
+    <!-- 9. Settings -->
+    <h3>⚙️ 9. Customizing Settings</h3>
+    <ul>
+        <li><strong>Tuning Standard (A4)</strong> — Set reference pitch from 400–480 Hz</li>
+        <li><strong>Temperament</strong> — Choose from 15 temperament systems</li>
+        <li><strong>Instrument</strong> — Select instrument preset for tailored tuning</li>
+        <li><strong>Tolerance</strong> — Set cent tolerance to ±5, ±10, or ±20 cents</li>
+        <li><strong>Theme</strong> — Choose Dark Mode (optimized for stage), Light Mode, or Auto</li>
+        <li><strong>Spectrogram</strong> — Toggle the spectrogram display on or off</li>
+        <li><strong>Frequency Graph</strong> — Toggle and configure duration (5/10/30 seconds)</li>
+    </ul>
+
+    <hr>
+
+    <!-- FAQ -->
+    <h2>Frequently Asked Questions</h2>
+
+    <p class="faq-q">Why does PitchScope ask for microphone permission?</p>
+    <p>Microphone access is essential for PitchScope's core functionality — real-time pitch detection and audio analysis. All audio is processed locally on your device. No audio data is uploaded or transmitted to any server. You can revoke this permission anytime in iOS Settings → Privacy &amp; Security → Microphone.</p>
+
+    <p class="faq-q">Does PitchScope work with external microphones or audio interfaces?</p>
+    <p>Yes! PitchScope works with the built-in microphone, external USB audio interfaces, and Bluetooth instrument pickups. The app automatically uses your device's active audio input.</p>
+
+    <p class="faq-q">What instruments can I tune with PitchScope?</p>
+    <p>PitchScope includes presets for Chromatic (all notes), Guitar (standard + 7 alternate tunings), Ukulele, Violin, Cello, Bass, Banjo, Mandolin, and Piano. You can also use Chromatic mode for any instrument.</p>
+
+    <p class="faq-q">What is a "cent" and why does it matter?</p>
+    <p>A cent is a logarithmic unit of measure for musical intervals. One cent is 1/100th of a semitone. PitchScope shows your cent deviation from the target note — being within ±5 cents is generally considered "in tune" for most applications.</p>
+
+    <p class="faq-q">What is the difference between Equal Temperament and Just Intonation?</p>
+    <p>Equal Temperament divides each octave into 12 equal semitones — it's the standard for modern Western music. Just Intonation uses pure mathematical frequency ratios, which sound more "natural" but are key-specific. PitchScope supports both, plus 13 other temperament systems.</p>
+
+    <p class="faq-q">Where is my data stored?</p>
+    <p>All session recordings, tuning presets, CSV exports, and app preferences are stored locally on your device using Core Data and UserDefaults. Nothing is transmitted to external servers. Uninstalling the app removes all data.</p>
+
+    <p class="faq-q">Can I use PitchScope offline?</p>
+    <p>Yes! PitchScope works completely offline. All audio processing, pitch detection, and analysis features work without an internet connection. No network permission is required.</p>
+
+    <p class="faq-q">Does PitchScope collect any personal data?</p>
+    <p>No. PitchScope does not collect, store, or transmit any personal information. All audio processing happens locally on your device. See our <a href="https://daibou007.github.io/PrivacyAndSupport/PitchScoper/privacy.html">Privacy Policy</a> for details.</p>
+
+    <p class="faq-q">How accurate is the pitch detection?</p>
+    <p>PitchScope uses a hybrid autocorrelation + HPS (Harmonic Product Spectrum) algorithm with high-resolution FFT analysis for sub-50ms end-to-end latency and accurate frequency detection down to 0.1 Hz resolution.</p>
+
+    <p class="faq-q">The app isn't picking up my instrument. What should I do?</p>
+    <p>Try moving closer to the microphone, ensuring you're in a quiet environment, and playing a single sustained note rather than chords. If using an external device, check that it's properly connected in iOS Settings. If issues persist, please email us at <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a>.</p>
+
+    <hr>
+
+    <!-- FOOTER -->
+    <h2>Still Need Help?</h2>
+    <div class="contact-box">
+        <p>We're happy to help with any questions or feedback.</p>
+        <p><strong>Email: <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a></strong></p>
+        <p style="color:#666; font-size:14px;">Response time: within 24 hours on business days.</p>
+    </div>
+
+    <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #999; font-size: 14px;">
+        <p>Copyright &copy; 2026 Daibou007 Team. All rights reserved.</p>
+        <p>Daibou007 Team</p>
+    </footer>
+
+</body>
+</html>
