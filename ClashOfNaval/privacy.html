@@ -46,14 +46,14 @@
     <p>Gameplay preferences (sound, vibration, display settings, ship skin selection) are stored locally on your device.</p>
 
     <h2>3. Online Multiplayer &amp; Network Access</h2>
-    <p>Clash of Naval requires network access (Wi-Fi or cellular) to offer online multiplayer: creating/joining rooms, quick matchmaking, and exchanging turn-based game moves (ship placement, shots, results) with our game server over a WebSocket connection. iOS may prompt for local network access when the App looks for or connects to game servers on your network — this is used solely to establish gameplay connections, not to scan or profile devices on your network for any other purpose.</p>
+    <p>Clash of Naval requires network access (Wi-Fi or cellular) to offer online multiplayer: creating/joining rooms, quick matchmaking, and exchanging turn-based game moves (ship placement, shots, results) with our game server over an encrypted WebSocket connection (wss://). iOS may prompt for local network access when the App looks for or connects to game servers on your network — this is used solely to establish gameplay connections, not to scan or profile devices on your network for any other purpose.</p>
     <p>Data exchanged during an online match is limited to gameplay information (moves, room codes, match results, your anonymous player ID) and basic match statistics (wins, losses, shot accuracy) used to calculate a skill rating and recommend a fitting bot difficulty. No personal information is transmitted.</p>
 
     <h2>4. Camera, Photo Library &amp; Near-Field Communication (NFC)</h2>
     <p>Clash of Naval does not request or use camera access, photo library access, or near-field communication (NFC). The App has no features that require these permissions, and none of them are used anywhere in the game.</p>
 
-    <h2>5. Sign in with Apple (Optional)</h2>
-    <p>You may optionally sign in with Apple to display a chosen nickname and sync your online profile. Sign in with Apple shares only the identity confirmation returned by Apple (it does not reveal your Apple ID or email to us unless you choose to share your email through Apple's settings). You can stop using Apple sign-in at any time from Settings — your anonymous player ID continues to work without it.</p>
+    <h2>5. Player Identity (No Account Required)</h2>
+    <p>Clash of Naval never asks you to sign in with Apple or any other identity provider, and we never receive your Apple ID or email. Your online identity is a random account code generated on your device the first time you launch the App and stored locally; the game server only ever sees a scrambled (hashed) form of this code as your anonymous player ID, so no identifier that can be linked back to you is transmitted or stored. You can pick a nickname once from Settings (optional, and not verified against any real identity), and you can permanently delete your profile at any time via Settings → Delete Account.</p>
 
     <h2>6. Player Reports &amp; Blocking</h2>
     <p>To keep online matches fair, you may report or block another player from within an active match. A report transmits only the match's room identifier, the reported player's anonymous ID, and the report reason (e.g. offensive nickname) to our moderation system — no chat logs, images, or other personal data are collected as part of this feature (Clash of Naval has no free-text chat).</p>
@@ -65,7 +65,7 @@
     <p>Local gameplay preferences and statistics are stored on your device and are removed automatically when you uninstall the App, or immediately via Settings → Delete Data. Online profile data (anonymous ID, display name, win/loss record, leaderboard rank) is stored on our servers only for as long as your account is active, and is permanently deleted via Settings → Delete Account.</p>
 
     <h2>9. Third-Party Services</h2>
-    <p>Clash of Naval does not integrate any third-party analytics or advertising services, and no data is shared with, or sold to, any third party. The only optional login is Sign in with Apple, which shares with us only what Apple's own sign-in flow returns (see Section 5).</p>
+    <p>Clash of Naval does not integrate any third-party analytics, advertising, or social login services. No data is shared with, or sold to, any third party.</p>
 
     <h2>10. Children's Privacy</h2>
     <p>Clash of Naval does not knowingly collect personal information from anyone, including children under the age of 13. The App does not require real names, email addresses, or other identifying details to play.</p>
