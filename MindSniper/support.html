@@ -35,7 +35,7 @@
 <body>
 
     <h1>MindSniper Support</h1>
-    <p class="subtitle">A Gesture-Based Mind Mapping App for iPhone &amp; iPad · Published by Daibou007 Team</p>
+    <p class="subtitle">A Gesture-Based Mind Mapping App for iPad · Published by Daibou007 Team</p>
 
     <!-- CONTACT -->
     <h2>Contact Us</h2>
@@ -54,32 +54,40 @@
     <h3>1. Getting Started</h3>
     <div class="step"><strong>Step 1</strong> — On the map list, tap <strong>+</strong> to create a new map, or open one of the sample maps that are created for you on first launch.</div>
     <div class="step"><strong>Step 2</strong> — Tap the <strong>+</strong> button on the toolbar or FAB to add an idea node, then double-tap a node to edit its text, description, color, emoji, and shape.</div>
-    <div class="step"><strong>Step 3</strong> — Drag nodes anywhere on the canvas. Pinch to zoom in and out, and drag with one finger to pan around large maps.</div>
+    <div class="step"><strong>Step 3</strong> — Drag nodes anywhere on the canvas. Pinch to zoom in and out, and drag empty canvas with one finger to pan around large maps.</div>
 
     <!-- 2. Connecting and cutting -->
-    <h3>2. Connecting and Cutting Lines</h3>
+    <h3>2. Connecting, Moving, and Cutting Lines</h3>
     <ol>
-        <li><strong>Connect</strong> — Select a node, then drag from it to another node to draw a connection line between your ideas.</li>
-        <li><strong>Cut</strong> — Drag your finger or Apple Pencil straight across a connection line to cut it. The cut line snaps apart — that's the signature MindSniper move for pruning ideas.</li>
-        <li><strong>Rearrange</strong> — Drag an unselected node to move it; drag a selected node to draw a new connection from it.</li>
+        <li><strong>Connect</strong> — Single-Hand mode: select a node, then drag from it to another node. Two-Hand mode: hold the floating Hold button while dragging. Either way, a rope-like connection line grows between your ideas.</li>
+        <li><strong>Move</strong> — Drag any node to reposition it. In Single-Hand mode, tap the node first if it isn't selected — dragging a selected node draws a connection instead.</li>
+        <li><strong>Cut</strong> — Touch a connection line (or within a finger's width of it) and drag across. Cutting always starts on the rope itself, and the line snaps apart — the signature MindSniper move for pruning ideas.</li>
     </ol>
-    <div class="tip"><strong>Tip:</strong> Two operation modes are available in Settings → Interaction &amp; Style. <em>Single-Hand (Apple Pencil)</em>: tap to select, drag a selected node to connect, drag empty canvas to cut lines. <em>Two-Hand (Modifier)</em>: hold the floating Hold button while dragging to connect, or pan without it to move.</div>
+    <div class="tip"><strong>Tip:</strong> Two operation modes live in Settings → Interaction &amp; Style, and in both modes the canvas behaves the same on open space: drag with one finger to pan, and start any cut on the rope itself. <em>Single-Hand (Apple Pencil)</em>: tap a node to select it, drag a selected node to connect, drag an unselected node to move it. <em>Two-Hand (Modifier)</em>: drag any node to move it; hold the floating Hold button while dragging to connect instead.</div>
 
     <!-- 3. Styling -->
     <h3>3. Styling Your Map</h3>
     <ul>
-        <li><strong>Nodes</strong> — Change node color, emoji, shape, font size/boldness, text alignment, flag a node, or set task progress.</li>
+        <li><strong>Nodes</strong> — Change node color, emoji, shape, font size/boldness, text alignment, flag a node, or set task progress. Select several nodes at once to apply a style to all of them.</li>
         <li><strong>Connection lines</strong> — Choose curve, straight, or dashed styles; add arrowheads (V line, solid, hollow, diamond, dot) on one or both ends; pick a connection color.</li>
-        <li><strong>Canvas</strong> — Switch backgrounds (plain, dark, paper ruled, graph paper, dotted, and more) and toggle the grid. Dark Mode is available in Settings.</li>
+        <li><strong>Canvas</strong> — Switch backgrounds (plain, dark, paper ruled, graph paper, dotted, and more) and toggle the grid. App-wide Dark Mode is available in Settings.</li>
+        <li><strong>Themes</strong> — Pick a theme palette (candy, forest, ocean, and more) to re-skin every node and connection of the whole map in one tap.</li>
     </ul>
 
-    <!-- 4. Layouts -->
-    <h3>4. Automatic Layouts</h3>
+    <!-- 4. Layouts & viewing tools -->
+    <h3>4. Automatic Layouts &amp; Viewing Tools</h3>
     <p>Tap any layout button in the toolbar to instantly rearrange your whole map:</p>
     <ul>
         <li><strong>Organic</strong> — a force-directed layout that untangles knots naturally.</li>
         <li><strong>Radial Ring</strong> — a circular arrangement around a central idea.</li>
         <li><strong>Mind Map Tree</strong> — the classic balanced left-right tree layout.</li>
+    </ul>
+    <p>Additional tools in the top bar keep your maps easy to explore:</p>
+    <ul>
+        <li><strong>Search &amp; Filters</strong> — find nodes by text or filter by flag, progress, color, or shape; matches pulse-highlight on the canvas.</li>
+        <li><strong>Outliner</strong> — read and edit your map as an indented tree list. Tap a row to locate the node on the canvas, or edit a title inline and it updates in the map.</li>
+        <li><strong>Focus Mode</strong> — dim everything except the selected branch so you can concentrate.</li>
+        <li><strong>Screen rotation</strong> — rotate your iPad and the canvas keeps the same spot centered automatically.</li>
     </ul>
 
     <!-- 5. History & versions -->
@@ -87,12 +95,22 @@
     <ul>
         <li><strong>Undo / Redo</strong> — undo or redo your last edit at any time from the toolbar.</li>
         <li><strong>Version snapshots</strong> — the App automatically keeps the most recent 10 snapshots of each map on your device so you can roll back after big changes.</li>
-        <li><strong>Map list</strong> — rename, duplicate, or delete maps from the map list in the sidebar (iPad) or on the home screen (iPhone).</li>
+        <li><strong>Restore Last Session</strong> — relaunching the App reopens the map you last worked on, at its saved zoom and view position. Turn it off any time in Settings → Session.</li>
+        <li><strong>Map list</strong> — rename, duplicate, or delete maps from the sidebar map list.</li>
     </ul>
 
     <!-- 6. Export -->
     <h3>6. Exporting and Sharing</h3>
     <p>Export any map from the toolbar: <strong>PNG</strong> image, <strong>PDF</strong>, <strong>SVG</strong> vector, <strong>JSON</strong> data, <strong>OPML</strong> (for other mind map apps), <strong>Markdown</strong> task checklist, or plain <strong>text</strong>. The iOS share sheet lets you save to Files, AirDrop, Mail, and more. Exports never leave your device unless you choose where to send them.</p>
+
+    <!-- 7. Motion effects -->
+    <h3>7. Motion Effects (Optional)</h3>
+    <p>Both effects are switched off by default and can be enabled anytime in <strong>Settings → Motion Effects</strong>:</p>
+    <ul>
+        <li><strong>Shake to Jiggle</strong> — give your device a shake and every connection line springs and wobbles like real rope.</li>
+        <li><strong>Rotate to Resettle</strong> — turning the device makes the lines droop and resettle under the new gravity direction.</li>
+    </ul>
+    <div class="tip"><strong>Note:</strong> Motion effects read the device's motion sensor in real time while the effect runs. Everything is processed on your device and nothing is recorded or sent anywhere — see our <a href="privacy.html">Privacy Policy</a>.</div>
 
     <hr>
 
@@ -105,6 +123,9 @@
     <p class="faq-q">Where is my data stored?</p>
     <p>Your maps and notes are stored only in local files in the App's private area on your device, along with automatic version snapshots and your display preferences. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
 
+    <p class="faq-q">Why does the App reopen the same map and spot each time I launch it?</p>
+    <p>That's the Restore Last Session setting (on by default): the App reopens the map you were last working on at its saved zoom and view position, so you never lose your place between sessions. Turn it off any time in Settings → Session.</p>
+
     <p class="faq-q">Does MindSniper sync to iCloud or any cloud service?</p>
     <p>No. MindSniper does not sync your maps to iCloud or any other cloud service. If you want a copy elsewhere, use Export and save the file wherever you like.</p>
 
@@ -112,7 +133,13 @@
     <p>Yes. Delete a map from the map list at any time, or uninstall the App to remove everything at once.</p>
 
     <p class="faq-q">Why can't I cut a connection line?</p>
-    <p>Make sure the line isn't selected first, then swipe cleanly across it. Cutting needs a single straight drag across the line with a small pause at the end — practice once and it becomes second nature.</p>
+    <p>Cutting must start on the line itself: touch the rope (or within a finger's width of it) and drag across it in one stroke. A swipe that starts on empty canvas pans the map instead. If the line is selected, deselect it first, then try again.</p>
+
+    <p class="faq-q">Why can't I see the Shake to Jiggle / Rotate to Resettle effects?</p>
+    <p>These optional effects are off by default. Enable them in <strong>Settings → Motion Effects</strong>. They run only while the map is open and are designed to be subtle so they never interfere with editing.</p>
+
+    <p class="faq-q">I rotated my device and the view stayed put — is that a bug?</p>
+    <p>No — that's intentional. MindSniper keeps the same spot of your map centered when you rotate between portrait and landscape, so you never lose your place. The optional <em>Rotate to Resettle</em> motion effect adds a gravity-style rope droop on top of that centering.</p>
 
     <p class="faq-q">The app crashed or isn't working properly. What should I do?</p>
     <p>Try force-quitting and relaunching the app. If issues persist, please email us at <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a> with details about the problem, your device model, and iOS version.</p>
