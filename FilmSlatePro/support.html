@@ -64,10 +64,10 @@
 
     <!-- 2. Entering Values -->
     <h3>✏️ 2. Entering Values — Tap Any Field to Write It</h3>
-    <p>Every value on the board can be rewritten in place:</p>
+    <p>Every value on the board can be rewritten in place — each editable field is framed by a light gray outline. The outlines are a screen-only guide: captured snapshots always show a clean slate.</p>
     <ol>
         <li>Tap the value you want to change (for example the SCENE number).</li>
-        <li>Type with the keyboard, or write with an <strong>Apple Pencil</strong> — iPadOS converts your handwriting to text automatically (see <a href="#pencil">Apple Pencil handwriting</a> below).</li>
+        <li>Type with the keyboard, or write with an <strong>Apple Pencil</strong> — iPadOS converts your handwriting to text automatically in the same field (see <a href="#pencil">Apple Pencil handwriting</a> below).</li>
         <li>Press <em>return</em>, tap another field, or tap empty board space to commit the value to the slate.</li>
     </ol>
     <p>TAKE is a counter, so it only accepts numbers. If you prefer to fill in several fields at once, tap <em>Edit</em> in the top-left corner to open the full editor page, then press <em>Save</em>.</p>
@@ -75,10 +75,9 @@
 
     <!-- 3. Clap Action -->
     <h3>🔊 3. Recording a Take (Clap)</h3>
-    <p>Tap the clapper stick at the top of the screen ("TAP TO CLAP"). Each clap:</p>
+    <p>Tap the clapper stick at the top of the screen ("TAP TO CLAP"). A full-screen white stage rises: the striped stick splits into two blades that open on their left hinge and slam shut, with the clap sound, a haptic impact and one inverted frame at the moment of the clap. Each clap also:</p>
     <ol>
-        <li>Plays a clap sound with haptic feedback and a double inverted-screen flash.</li>
-        <li>Freezes the current timecode and captures a <strong>snapshot image of the board</strong>.</li>
+        <li>Freezes the current timecode and captures a <strong>clean snapshot image of the board</strong> (editing guides are never captured).</li>
         <li>Creates a shot log entry with scene, take, timecode, date, and the snapshot.</li>
         <li>Increments TAKE for the next shot.</li>
     </ol>
@@ -98,7 +97,7 @@
     <h3>📋 5. Shot History</h3>
     <p>Every clap is saved automatically. Tap the <em>film.stack</em> icon in the top bar to open Shot History as a full page:</p>
     <ol>
-        <li>Shots appear as <strong>snapshot cards</strong> showing the board image captured at clap time, plus scene, take, timecode, and date.</li>
+        <li>Shots appear as <strong>snapshot cards</strong> showing the board image captured at clap time, plus scene, take, timecode, and date. Each card shows the whole board — images are never cropped, in any orientation.</li>
         <li>Use the grid/list button at the top to switch to a <strong>compact text list</strong> — your choice is remembered (default can be set in <em>Settings</em> → <em>Shot Log</em>).</li>
         <li>Search by scene, take, timecode, or notes.</li>
         <li>Tap any shot to open its detail page — add notes and delete the shot there.</li>
@@ -106,12 +105,17 @@
     </ol>
     <p>Shots recorded before snapshots existed show a "No snapshot" placeholder.</p>
 
-    <!-- 6. CSV Export -->
+    <!-- 6. CSV & Image Export -->
     <h3>📤 6. Exporting Shot Logs</h3>
     <ol>
         <li>Open Shot History.</li>
-        <li>Tap <em>Export</em> in the top-right corner.</li>
-        <li>Share the CSV file via AirDrop, Mail, Messages, or save to Files.</li>
+        <li>Tap <em>Export</em> in the top-right corner and choose one of the two options:
+            <ul>
+                <li><strong>CSV Only</strong> — the text log.</li>
+                <li><strong>CSV + Board Images</strong> — the CSV plus every board snapshot of the current list, each a full-resolution PNG named by date, scene, and take.</li>
+            </ul>
+        </li>
+        <li>Share via AirDrop, Mail, Messages, or save to Files.</li>
     </ol>
     <p>The CSV contains Date, Time, Production, Roll, Scene, Shot, Take, Director, Cameraman, Timecode, and Notes for every shot — ready for script supervision reports or post-production.</p>
 
@@ -160,7 +164,7 @@
     <p>All shot logs, board snapshots, and preferences are stored locally on your device (Core Data, UserDefaults, and the app's own folder for snapshot images). Nothing is transmitted to external servers. Uninstalling the app removes all of it.</p>
 
     <p class="faq-q">Can I export my shot logs for use in post-production?</p>
-    <p>Yes. From Shot History, tap <em>Export</em> to create a CSV containing Date, Time, Scene, Take, Timecode, Notes, and a Snapshot reference for every shot.</p>
+    <p>Yes. From Shot History, tap <em>Export</em> and choose <strong>CSV Only</strong> for the text log, or <strong>CSV + Board Images</strong> to also get every board snapshot as a full-resolution PNG named by date, scene, and take. The CSV contains Date, Time, Production, Roll, Scene, Shot, Take, Director, Cameraman, Timecode, and Notes for every shot.</p>
 
     <p class="faq-q">Does FilmSlate Pro collect any personal data?</p>
     <p>No. FilmSlate Pro does not collect, store, or transmit any personal information. There are no accounts, no analytics, and no tracking. All data stays on your device. See our <a href="https://www.daibou007.com/filmslatepro/privacy">Privacy Policy</a> for details.</p>
