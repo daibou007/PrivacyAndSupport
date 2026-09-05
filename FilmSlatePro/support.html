@@ -33,7 +33,7 @@
 <body>
 
     <h1>FilmSlate Pro Support</h1>
-    <p class="subtitle">The Ultimate Digital Clapperboard for Film Production</p>
+    <p class="subtitle">The Digital Clapperboard for Film Production on iPad</p>
 
     <!-- CONTACT -->
     <h2>Contact Us</h2>
@@ -48,88 +48,95 @@
     <!-- USER GUIDE -->
     <h2>How to Use FilmSlate Pro</h2>
 
-    <!-- 1. Slate Modes -->
-    <h3>🎬 1. Choosing a Slate Mode</h3>
-    <p>FilmSlate Pro offers two input modes to suit your workflow:</p>
-    <div class="step"><strong>Text Mode</strong> — Enter production details using text fields in a classic clapperboard layout. Ideal for quick setup and precise metadata entry.</div>
-    <div class="step"><strong>Handwriting Mode</strong> — Write directly on the slate with Apple Pencil or your finger using PencilKit. Perfect for mimicking a traditional physical slate on set.</div>
-    <p>Switch between modes anytime in <em>Settings</em> → <em>Slate Mode</em>.</p>
-
-    <!-- 2. Setting Up the Slate -->
-    <h3>🎞️ 2. Setting Up Your Slate</h3>
-    <p>Fill in the production details displayed on the digital slate:</p>
+    <!-- 1. The Slate -->
+    <h3>🎬 1. The Slate and Its Fields</h3>
+    <p>The main screen is a full-screen digital clapperboard that the camera can film directly. The board shows these fields:</p>
     <ul>
-        <li><strong>PROD</strong> — Production name (e.g., "The Midnight Shoot")</li>
+        <li><strong>PRODUCTION</strong> — Production name (e.g., "The Midnight Shoot")</li>
+        <li><strong>ROLL</strong> — Roll or magazine identifier (e.g., A001)</li>
         <li><strong>SCENE</strong> — Scene number or identifier</li>
         <li><strong>SHOT</strong> — Shot number within the scene</li>
         <li><strong>TAKE</strong> — Take number (auto-increments with each clap)</li>
-        <li><strong>DIR</strong> — Director name</li>
-        <li><strong>CAM</strong> — Camera or cinematographer identifier</li>
+        <li><strong>DIRECTOR</strong> — Director's name</li>
+        <li><strong>CAMERAMAN</strong> — Camera operator or cinematographer</li>
+        <li><strong>DATE / TIME</strong> — Current date and running timecode</li>
     </ul>
-    <p>Tap <em>Edit Slate</em> to modify all fields at once. The take number increments automatically each time you clap.</p>
 
-    <!-- 3. Timecode -->
-    <h3>⏱️ 3. Timecode and Frame Rate</h3>
-    <p>The slate displays a real-time timecode readout. Configure your frame rate in <em>Settings</em> → <em>Timecode</em>:</p>
+    <!-- 2. Entering Values -->
+    <h3>✏️ 2. Entering Values — Tap Any Field to Write It</h3>
+    <p>Every value on the board can be rewritten in place:</p>
+    <ol>
+        <li>Tap the value you want to change (for example the SCENE number).</li>
+        <li>Type with the keyboard, or write with an <strong>Apple Pencil</strong> — iPadOS converts your handwriting to text automatically (see <a href="#pencil">Apple Pencil handwriting</a> below).</li>
+        <li>Press <em>return</em>, tap another field, or tap empty board space to commit the value to the slate.</li>
+    </ol>
+    <p>TAKE is a counter, so it only accepts numbers. If you prefer to fill in several fields at once, tap <em>Edit</em> in the top-left corner to open the full editor page, then press <em>Save</em>.</p>
+    <div class="tip">💡 <strong>Tip:</strong> Values update instantly — what you see on the board is exactly what the snapshot at clap time will capture.</div>
+
+    <!-- 3. Clap Action -->
+    <h3>🔊 3. Recording a Take (Clap)</h3>
+    <p>Tap the clapper stick at the top of the screen ("TAP TO CLAP"). Each clap:</p>
+    <ol>
+        <li>Plays a clap sound with haptic feedback and a double inverted-screen flash.</li>
+        <li>Freezes the current timecode and captures a <strong>snapshot image of the board</strong>.</li>
+        <li>Creates a shot log entry with scene, take, timecode, date, and the snapshot.</li>
+        <li>Increments TAKE for the next shot.</li>
+    </ol>
+    <p>To start over, tap the circular reset arrow (↺) in the top bar and confirm — TAKE returns to 1.</p>
+
+    <!-- 4. Timecode -->
+    <h3>⏱️ 4. Timecode and Frame Rate</h3>
+    <p>The slate displays a real-time timecode readout driven by your chosen frame rate (<em>Settings</em> → <em>Timecode</em>):</p>
     <ul>
         <li><strong>23.976 / 24 fps</strong> — Cinema and film production</li>
         <li><strong>25 / 50 fps</strong> — PAL broadcast standards</li>
         <li><strong>29.97 / 30 / 60 fps</strong> — NTSC broadcast standards</li>
     </ul>
-
-    <!-- 4. Clap Action -->
-    <h3>🔊 4. Recording a Clap</h3>
-    <p>The CLAP button is the core action of FilmSlate Pro:</p>
-    <ol>
-        <li>Set up your production details on the slate.</li>
-        <li>Tap the <strong>CLAP</strong> button to simulate a slate clap.</li>
-        <li>The app plays a clap sound, flashes the screen, and provides haptic feedback.</li>
-        <li>A shot log entry is automatically created with the current timecode, scene, take, and all production metadata.</li>
-        <li>The take number automatically increments for the next shot.</li>
-    </ol>
-    <div class="tip">💡 <strong>Tip:</strong> Use the CLAP button at the start of each take, just like a physical slate. The timecode stamp helps sync audio and video in post-production.</div>
+    <p>Use <em>Jam to Manual Timecode</em> to sync the counter to a camera or recorder's start timecode.</p>
 
     <!-- 5. Shot History -->
-    <h3>📋 5. Viewing Shot History</h3>
-    <p>All your clap records are automatically saved in the shot history:</p>
+    <h3>📋 5. Shot History</h3>
+    <p>Every clap is saved automatically. Tap the <em>film.stack</em> icon in the top bar to open Shot History as a full page:</p>
     <ol>
-        <li>Tap the <em>History</em> tab at the bottom of the screen.</li>
-        <li>Browse all recorded shots, sorted by most recent first.</li>
-        <li>Tap any entry to view full details (timecode, scene, take, production, director, camera).</li>
-        <li>Use the search bar to filter by scene, production name, or notes.</li>
-        <li>Swipe left or long-press to delete individual entries.</li>
+        <li>Shots appear as <strong>snapshot cards</strong> showing the board image captured at clap time, plus scene, take, timecode, and date.</li>
+        <li>Use the grid/list button at the top to switch to a <strong>compact text list</strong> — your choice is remembered (default can be set in <em>Settings</em> → <em>Shot Log</em>).</li>
+        <li>Search by scene, take, timecode, or notes.</li>
+        <li>Tap any shot to open its detail page — add notes and delete the shot there.</li>
+        <li>Swipe a list row left to delete (asks for confirmation first).</li>
     </ol>
+    <p>Shots recorded before snapshots existed show a "No snapshot" placeholder.</p>
 
     <!-- 6. CSV Export -->
     <h3>📤 6. Exporting Shot Logs</h3>
-    <p>Export your shot history as a CSV file for use in editing software, script supervision, or production reports:</p>
     <ol>
-        <li>Open the <em>History</em> tab.</li>
-        <li>Tap the <em>Export</em> button in the top-right corner.</li>
+        <li>Open Shot History.</li>
+        <li>Tap <em>Export</em> in the top-right corner.</li>
         <li>Share the CSV file via AirDrop, Mail, Messages, or save to Files.</li>
     </ol>
-    <p>The CSV includes date, time, production, scene, shot, take, director, camera, timecode, and notes for every recorded shot.</p>
+    <p>The CSV contains Date, Time, Production, Roll, Scene, Shot, Take, Director, Cameraman, Timecode, and Notes for every shot — ready for script supervision reports or post-production.</p>
 
-    <!-- 7. Handwriting Mode -->
-    <h3>✏️ 7. Using Handwriting Mode</h3>
-    <p>Handwriting Mode lets you write directly on the slate with Apple Pencil or your finger:</p>
+    <!-- 7. Apple Pencil -->
+    <h3 id="pencil">✍️ 7. Apple Pencil Handwriting</h3>
+    <p>FilmSlate Pro turns your writing into the text shown on the slate — the way a real marker writes on a physical slate, but with clean, legible, machine-readable results.</p>
     <ol>
-        <li>Switch to Handwriting Mode in <em>Settings</em> → <em>Slate Mode</em>.</li>
-        <li>Optionally set a custom background image by tapping <em>Edit Slate</em>.</li>
-        <li>Write or draw directly on the slate canvas.</li>
-        <li>The timecode overlay remains visible at the bottom.</li>
-        <li>Your drawings are saved automatically and persist between sessions.</li>
+        <li>Tap any board value to open its input field.</li>
+        <li>Write with your Apple Pencil directly over the field. iPadOS <strong>Scribble</strong> converts the handwriting to text in place.</li>
+        <li>Press <em>return</em> or tap elsewhere to commit.</li>
     </ol>
-    <div class="tip">💡 <strong>Tip:</strong> Use Handwriting Mode with a custom background image (like a logo or set photo) to create a personalized slate that matches your production's look.</div>
+    <div class="tip">💡 <strong>Tip:</strong> Scribble is an iPadOS system feature. Make sure it is enabled in <em>Settings → Apple Pencil → Scribble</em> on your iPad, and choose your writing languages there (English, Chinese, and many more are supported). Handwriting recognition happens entirely on your device — nothing is uploaded.</div>
 
     <!-- 8. Settings -->
     <h3>⚙️ 8. Customizing Settings</h3>
+    <p>Open <em>Settings</em> (gear icon) — it opens as its own page with a back button:</p>
     <ul>
-        <li><strong>Slate Mode</strong> — Switch between Text Mode and Handwriting Mode</li>
-        <li><strong>Timecode Frame Rate</strong> — Set your preferred frame rate (23.976–60 fps)</li>
-        <li><strong>Dark Mode</strong> — Toggle dark mode on/off (recommended for on-set use to reduce screen glare)</li>
-        <li><strong>Welcome Guide</strong> — Replay the first-launch welcome guide</li>
-        <li><strong>Usage Overlay</strong> — Replay the on-screen usage tips overlay</li>
+        <li><strong>Slate Font Size</strong> — Small, Medium, or Large (Large is very large; the slate auto-fits the screen at any size)</li>
+        <li><strong>Board Display</strong> — <em>Invert Board Colors</em> switches the slate between white-on-black and black-on-white</li>
+        <li><strong>Shot Log</strong> — Choose whether Shot History opens in Snapshots or Text mode by default</li>
+        <li><strong>Timecode</strong> — Frame rate and jam sync</li>
+        <li><strong>Appearance</strong> — Dark (recommended on set), Light, or Follow System</li>
+        <li><strong>On Set</strong> — <em>Keep Screen Awake</em> stops the iPad from auto-locking while the slate is up</li>
+        <li><strong>Help &amp; Support</strong> — Replay the welcome guide / usage overlay, Privacy Policy, Support, Share</li>
+        <li><strong>About</strong> — Version info, feature overview, and rate the app</li>
     </ul>
 
     <hr>
@@ -138,28 +145,31 @@
     <h2>Frequently Asked Questions</h2>
 
     <p class="faq-q">What is FilmSlate Pro?</p>
-    <p>FilmSlate Pro is a digital clapperboard (film slate) app designed for film, television, and video production. It replaces a traditional physical slate with a feature-rich digital alternative that records shot metadata and exports production logs.</p>
+    <p>FilmSlate Pro is a digital clapperboard app for iPad designed for film, television, and video production. It replaces a physical slate with a feature-rich digital alternative that records shot metadata, captures a board snapshot on every take, and exports production logs.</p>
 
     <p class="faq-q">Does FilmSlate Pro require an internet connection?</p>
-    <p>No. FilmSlate Pro works completely offline. All features — slate display, clap recording, shot logging, and CSV export — work without an internet connection. This makes it ideal for on-set use where connectivity may be limited.</p>
+    <p>No. FilmSlate Pro works completely offline. All features — slate display, handwriting input, clap recording, snapshots, shot logging, and CSV export — work without an internet connection, which makes it ideal for on-set use.</p>
 
     <p class="faq-q">Does FilmSlate Pro require any device permissions?</p>
-    <p>No. FilmSlate Pro does not request access to your photo library, microphone, camera, contacts, or any other sensitive device resource. It's a self-contained app that needs no special permissions.</p>
+    <p>No. FilmSlate Pro does not request access to your photo library, microphone, camera, contacts, or location. Exports use the standard iOS share sheet only when you choose to share something.</p>
 
     <p class="faq-q">What devices does FilmSlate Pro support?</p>
-    <p>FilmSlate Pro is designed for iPad and requires iPadOS 16.0 or later. The larger screen makes it ideal for on-set use as a digital slate.</p>
+    <p>FilmSlate Pro is designed for iPad and requires iPadOS 16.0 or later. Apple Pencil handwriting is available on any iPad that supports Apple Pencil with Scribble enabled.</p>
 
-    <p class="faq-q">Where is my shot log data stored?</p>
-    <p>All shot logs, production metadata, drawings, and app preferences are stored locally on your device using iOS system storage (Core Data and UserDefaults). Nothing is transmitted to external servers. Uninstalling the app removes all data.</p>
+    <p class="faq-q">Where are my shot logs and snapshots stored?</p>
+    <p>All shot logs, board snapshots, and preferences are stored locally on your device (Core Data, UserDefaults, and the app's own folder for snapshot images). Nothing is transmitted to external servers. Uninstalling the app removes all of it.</p>
 
     <p class="faq-q">Can I export my shot logs for use in post-production?</p>
-    <p>Yes. You can export all shot logs as a CSV file from the History tab. The CSV includes date, time, timecode, scene, take, production, director, camera, and notes — making it easy to import into editing software or production reports.</p>
+    <p>Yes. From Shot History, tap <em>Export</em> to create a CSV containing Date, Time, Scene, Take, Timecode, Notes, and a Snapshot reference for every shot.</p>
 
     <p class="faq-q">Does FilmSlate Pro collect any personal data?</p>
     <p>No. FilmSlate Pro does not collect, store, or transmit any personal information. There are no accounts, no analytics, and no tracking. All data stays on your device. See our <a href="https://www.daibou007.com/filmslatepro/privacy">Privacy Policy</a> for details.</p>
 
     <p class="faq-q">How do I reset the take number?</p>
-    <p>Tap <em>Edit Slate</em> from the main screen, then manually set the take number to your desired value. The take counter will increment from that point onward with each clap.</p>
+    <p>Tap the circular reset arrow (↺) at the top of the main screen and confirm — the take counter returns to 1 and counts up from there on each clap.</p>
+
+    <p class="faq-q">Why do my older shots have no snapshot?</p>
+    <p>Snapshots are captured for shots recorded after the feature shipped. Older entries simply show a "No snapshot" placeholder — their scene, take, timecode, and notes are all still there.</p>
 
     <p class="faq-q">The app crashed or isn't working properly. What should I do?</p>
     <p>Try force-quitting and relaunching the app. If issues persist, please email us at <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a> with details about the problem and your device model &amp; iPadOS version.</p>
@@ -175,7 +185,7 @@
     </div>
 
     <hr>
-    <p style="text-align: center; color: #999; font-size: 13px; margin-bottom: 8px;">Last Updated: June 9, 2026</p>
+    <p style="text-align: center; color: #999; font-size: 13px; margin-bottom: 8px;">Last Updated: September 5, 2026</p>
     <p style="text-align: center; color: #999; font-size: 13px;">© 2026 Daibou007 Team. All rights reserved.</p>
 </body>
 </html>
