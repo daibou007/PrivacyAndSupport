@@ -51,13 +51,12 @@
         <li><strong>Photos (add only)</strong> — requested the first time you tap <em>Save to Photos</em> after an export, so the finished video or image can be written to your photo library. The App can only <em>add</em> items; it cannot read, browse, or modify your existing photos.</li>
     </ul>
     <p>Magic Pie does <strong>not</strong> request access to your microphone, camera, contacts, location, health data, Bluetooth, or any other sensitive device resource.</p>
-    <p><strong>AirPlay and external displays:</strong> you can mirror the disc to a TV or Apple TV using iOS's AirPlay feature. Mirroring is performed by iOS — the video of your artwork goes straight to the display you choose, over your own local network. The App requests no extra permission for it, makes no network request of its own, and sends nothing to us.</p>
-    <p><strong>Screen recording:</strong> MP4 exports are rendered frame by frame on your device with Apple's AVFoundation — the App does not record your screen for them. Separately, the fullscreen playback view offers an optional REC button, which uses Apple's ReplayKit to record the playing animation on screen and save it to your photo library. Recording runs only while you have it switched on, is written to a local file, is never sent anywhere, and does not capture audio from the microphone. Screen recording is unavailable while an AirPlay or external display is connected, because iOS cannot run both at the same time.</p>
+    <p><strong>Screen recording:</strong> when you export a video, the App uses Apple's ReplayKit to record the playback animation on screen so it can be written to the exported MP4 file. Recording runs only while that export is in progress, is never sent anywhere, and does not capture audio from the microphone.</p>
 
     <h2>4. Data Storage</h2>
     <p>Everything you create is stored locally on your iPad:</p>
     <ul>
-        <li><strong>Drafts and saved works</strong> — your layers, strokes, merged layers and disc settings are saved as local files in the App's own storage folder, protected by iOS file protection (encrypted at rest while your iPad is locked). Merging, reordering, hiding or rotating layers happens entirely on your device and changes only these local files.</li>
+        <li><strong>Drafts and saved works</strong> — your layers, strokes and disc settings are saved as local files in the App's own storage folder, protected by iOS file protection (encrypted at rest while your iPad is locked).</li>
         <li><strong>Preferences</strong> — appearance, canvas color, brush width, rotation speed, onion opacity, BGM track, volume and export settings are kept in iOS system preferences on your device.</li>
         <li><strong>Imported music</strong> — see section 6 below.</li>
     </ul>
