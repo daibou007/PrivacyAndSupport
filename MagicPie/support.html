@@ -82,8 +82,12 @@
     <p>Frames in Magic Pie are drawing layers, not separate discs. Each new layer stacks on top of everything you have drawn so far — use them to build your disc section by section: a center pattern on layer 1, petals on layer 2, decorations on layer 3.</p>
     <ul>
         <li><strong>Adding layers</strong> — tap the dashed <em>+</em> button in the layer strip to insert a new empty layer above the current one. Lower layers show through as onion ghosts so you can align the new section.</li>
+        <li><strong>Layer numbers</strong> — every thumbnail is labelled underneath: Layer 1, Layer 2, and so on. Numbers always match the current stacking order and update the moment you add, delete, reorder or merge layers.</li>
+        <li><strong>Reordering layers</strong> — press and hold a layer thumbnail, then drag it left or right; layers swap live as you drag and the whole drag is a single Undo step. You can also long-press and choose Move Layer Left / Move Layer Right.</li>
+        <li><strong>Hiding layers</strong> — the small eye button on each thumbnail hides the layer. A hidden layer is skipped during playback, export, thumbnails and onion ghosts until you tap the eye again; while you are editing it, it stays visible so you can keep drawing.</li>
+        <li><strong>Merging layers</strong> — tap <em>Merge</em> at the right end of the layer strip. Every layer gets a check circle (none are checked by default). Tick two or more layers and tap <em>Sure</em> to flatten them into one, keeping their drawing order, at the position of the lowest merged layer. <em>Cancel</em> leaves everything untouched. Merge mode locks the rest of the editor — drawing, tools, playback and export — until you confirm or cancel, and the merge itself is a single Undo step.</li>
         <li><strong>Managing layers</strong> — long-press (or right-click) a layer thumbnail to open its menu: Duplicate Layer, Move Layer Left / Right, Rotate Layer, Center Offset and Delete Layer. Deleting a layer always asks for confirmation first.</li>
-        <li><strong>Merged output</strong> — during playback and export, ALL layers are composited at full opacity into the one final disc — that single merged disc is what rotates.</li>
+        <li><strong>Merged output</strong> — during playback and export, ALL visible layers are composited at full opacity into the one final disc — that single merged disc is what rotates.</li>
     </ul>
 
     <!-- 5. Smart copy & object tools -->
@@ -173,7 +177,13 @@
     <p>They are the same thing. Magic Pie is a single-disc model: layers are stacked sections of one disc, and playback composites every layer into that one disc and rotates it. There is no frame-by-frame switching.</p>
 
     <p class="faq-q">Can I reorder layers?</p>
-    <p>Yes. Long-press a layer thumbnail to open its menu: Duplicate Layer, Move Layer Left / Right, Rotate Layer, Center Offset and Delete Layer. Each of these is a single Undo step.</p>
+    <p>Yes. Press and hold a layer thumbnail and drag it left or right — layers swap live as you drag, and the whole drag is a single Undo step. You can also long-press for the menu (Duplicate Layer, Move Layer Left / Right, Rotate Layer, Center Offset and Delete Layer), where each command is one Undo step.</p>
+
+    <p class="faq-q">Can I merge layers?</p>
+    <p>Yes. Tap <em>Merge</em> at the right end of the layer strip, tick the layers you want with their check circles (nothing is checked by default), then tap <em>Sure</em>. The chosen layers are flattened into one layer — keeping their drawing order — at the position of the lowest merged layer, and the whole merge is a single Undo step. Tap <em>Cancel</em> to leave everything untouched. While merge mode is active the rest of the editor is locked so nothing can change your disc mid-merge.</p>
+
+    <p class="faq-q">Can I hide a layer without deleting it?</p>
+    <p>Yes. Tap the small eye button on any layer thumbnail. A hidden layer is skipped during playback, export, thumbnails and onion ghosts, but its strokes are kept until you show it again. While you are editing that layer it stays visible so you can keep drawing on it.</p>
 
     <p class="faq-q">Why does my exported video look different from the canvas?</p>
     <p>Exports always use the merged disc at full opacity — onion ghosts and editing guides are never included. If you expected a ghost to be part of the artwork, add it to a layer as a real stroke first.</p>
