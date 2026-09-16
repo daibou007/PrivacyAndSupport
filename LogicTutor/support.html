@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support – LogicTutor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        body { max-width: 860px; margin: 50px auto; padding: 0 20px; line-height: 1.7; color: #333; }
+        h1 { color: #1a1a1a; margin-bottom: 8px; font-size: 30px; text-align: center; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 16px; }
+        h2 { color: #2c2c2c; margin: 36px 0 14px; font-size: 22px;
+             border-left: 4px solid #3B82F6; padding-left: 12px; }
+        h3 { color: #3a3a3a; margin: 22px 0 10px; font-size: 17px; }
+        p  { margin-bottom: 12px; font-size: 15px; }
+        ul, ol { margin-left: 24px; margin-bottom: 14px; }
+        li { margin-bottom: 8px; font-size: 15px; }
+        a  { color: #3B82F6; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .contact-box { background: #eff6ff; border: 1px solid #bfdbfe;
+                       padding: 22px 24px; border-radius: 10px; margin: 20px 0; }
+        .contact-box p { margin-bottom: 6px; }
+        .step { background: #fafafa; border: 1px solid #eee; border-radius: 8px;
+                padding: 14px 18px; margin-bottom: 12px; }
+        .step strong { color: #3B82F6; }
+        .tip { background: #eff6ff; border-left: 4px solid #93c5fd;
+               padding: 10px 16px; border-radius: 4px; margin: 12px 0; font-size: 14px; }
+        .faq-q { font-weight: 600; color: #1a1a1a; margin-top: 18px; margin-bottom: 6px; }
+        code { background: #f4f4f5; border: 1px solid #e4e4e7; border-radius: 4px;
+               padding: 1px 6px; font-size: 14px;
+               font-family: "SF Mono", Menlo, Consolas, monospace; }
+        hr { border: none; border-top: 1px solid #eee; margin: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <h1>LogicTutor Support</h1>
+    <p class="subtitle">Propositional Logic Study Toolkit for iPhone and iPad</p>
+
+    <!-- CONTACT -->
+    <h2>Contact Us</h2>
+    <div class="contact-box">
+        <p>Need help or have feedback? We're here to help.</p>
+        <p><strong>Email: <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a></strong></p>
+        <p style="color:#666; font-size:14px;">We typically respond within 24 hours on business days (Mon – Fri).</p>
+    </div>
+
+    <hr>
+
+    <!-- USER GUIDE -->
+    <h2>How to Use LogicTutor</h2>
+
+    <!-- 1. The Big Picture -->
+    <h3>🧭 1. The Big Picture — One Formula, Five Tools</h3>
+    <p>LogicTutor is built around one central idea: you enter a propositional logic formula once, and every tool works on it. Type a formula on the Home screen, tap <em>Analyze</em>, and you get the parsed syntax tree, full truth table, CNF/DNF conversions and a satisfiability report. From there you can also export everything as a PDF.</p>
+    <div class="step">
+        <p><strong>Your first analysis:</strong> type <code>(P → Q) ∧ P</code> on the Home screen. The App validates it as you type, then Analyze shows that the formula is <em>contingent</em> — true only when both P and Q are true — and the truth table tab lays out all four cases.</p>
+    </div>
+    <p>The entire logic engine runs on your device. Nothing you enter is ever uploaded.</p>
+
+    <!-- 2. Entering formulas -->
+    <h3>⌨️ 2. Entering Formulas</h3>
+    <ul>
+        <li><strong>Symbol keyboard bar</strong> — every formula input attaches a bar with the symbols you need: <code>¬ ∧ ∨ ⊕ → ↔</code> plus parentheses and proposition letters. No hunting through the iOS keyboard.</li>
+        <li><strong>ASCII friendly</strong> — you can also type <code>-&gt;</code>, <code>&amp;&amp;</code>, <code>~</code> and words like <code>and</code>, <code>or</code>, <code>not</code>, <code>implies</code>; they are converted automatically.</li>
+        <li><strong>Live validation</strong> — errors such as unbalanced parentheses or missing operands are reported while you type, with the problem position highlighted, before you ever press Analyze.</li>
+        <li><strong>Operator precedence</strong> — ¬ binds tightest, then ∧, ∨, ⊕, then → (right-associative) and finally ↔. Add parentheses any time you want to be explicit.</li>
+    </ul>
+
+    <!-- 3. Truth tables -->
+    <h3>🔢 3. Truth Tables</h3>
+    <ul>
+        <li><strong>Exhaustive and exact</strong> — formulas with up to 10 distinct variables get a complete row-by-row table; every row shows the value of each subexpression, not just the final result.</li>
+        <li><strong>Classification</strong> — the App reports whether the formula is a tautology (always true), a contradiction (always false), or contingent, directly from the table.</li>
+        <li><strong>Find rows fast</strong> — use the row filters to jump to the rows where the formula is true or false — handy for reading off satisfying assignments.</li>
+    </ul>
+
+    <!-- 4. CNF / DNF -->
+    <h3>🔁 4. CNF / DNF Conversion</h3>
+    <ul>
+        <li><strong>Step by step</strong> — the conversion records every transformation: eliminating implications, pushing negations inward (De Morgan), and distributing to reach conjunctive or disjunctive normal form.</li>
+        <li><strong>Verified equivalent</strong> — the result is checked to be logically equivalent to your original formula, so what you see is what your formula really says.</li>
+        <li><strong>Guarded growth</strong> — if a formula's normal form would grow beyond practical size, the App tells you instead of freezing.</li>
+    </ul>
+
+    <!-- 5. SAT reasoning -->
+    <h3>🧠 5. Satisfiability &amp; SAT Reasoning</h3>
+    <ul>
+        <li><strong>Satisfiable or not</strong> — the reasoning view reports whether any assignment makes the formula true, classifies it (tautology / contradiction / contingent), and lists a satisfying model when one exists.</li>
+        <li><strong>Big formulas welcome</strong> — beyond 10 variables the App switches from the full table to an on-device DPLL SAT solver, so it still answers even when the table would have millions of rows.</li>
+    </ul>
+
+    <!-- 6. Exercises -->
+    <h3>📚 6. Exercises &amp; Wrong-Question Book</h3>
+    <ul>
+        <li><strong>Practice library</strong> — work through exercises organized by topic: parsing, truth tables, equivalence, CNF/DNF and satisfiability.</li>
+        <li><strong>Fair grading</strong> — answers are compared by logical equivalence, so any correct form of the formula is accepted, not just one exact string.</li>
+        <li><strong>Wrong-question book</strong> — every mistake is collected for review; retry an exercise any time with <em>Try Again</em>.</li>
+    </ul>
+
+    <!-- 7. History -->
+    <h3>🕘 7. History &amp; Reuse</h3>
+    <p>Every analysis you run is saved to History with its formula, date and classification. Tap <em>Reuse</em> on any entry to send that formula to another tool — truth table, normal form, SAT reasoning or exercises — without retyping it.</p>
+
+    <!-- 8. PDF export -->
+    <h3>📄 8. PDF Export</h3>
+    <ul>
+        <li><strong>Export anything</strong> — truth tables, CNF/DNF derivations and SAT reports can each be exported as a PDF document.</li>
+        <li><strong>Share anywhere</strong> — the finished PDF opens in the standard iOS share sheet: save to Files, send by Mail or Messages, or hand it to any installed app.</li>
+    </ul>
+
+    <!-- 9. AI parsing -->
+    <h3>🪄 9. AI Natural-Language Parsing (Optional)</h3>
+    <p>If describing formulas in symbols is awkward, you can type a plain sentence and let an AI model turn it into a formula. This feature is <strong>off by default</strong> and fully under your control:</p>
+    <ul>
+        <li><strong>Setup</strong> — open <em>Settings → LLM Settings</em>, enable the feature, pick a provider and model, and paste your own API key. The key is stored in the iOS Keychain on your device.</li>
+        <li><strong>Privacy</strong> — when you submit a sentence, only that text is sent directly from your device to the provider you configured. It never passes through us, and your history and exercises stay local.</li>
+        <li><strong>Verification</strong> — the returned formula is immediately parsed and analyzed by the built-in on-device engine, so you can check it with the truth table before trusting it.</li>
+        <li><strong>Accuracy</strong> — AI output may be wrong. If the formula doesn't match your intent, adjust the wording or edit the formula by hand.</li>
+    </ul>
+    <div class="tip">💡 <strong>Tip:</strong> short, unambiguous sentences parse far better. "If it rains then the road is wet" works; long compound sentences with unclear subjects usually need a second look.</div>
+
+    <!-- 10. Settings -->
+    <h3>⚙️ 10. Settings &amp; Appearance</h3>
+    <ul>
+        <li><strong>Light &amp; dark</strong> — choose System, Light or Dark; the whole App follows instantly.</li>
+        <li><strong>Formula font size</strong> — adjust the size used across formula inputs for comfortable reading.</li>
+        <li><strong>Guides</strong> — replay the welcome guide at any time from Settings.</li>
+    </ul>
+
+    <hr>
+
+    <!-- FAQ -->
+    <h2>Frequently Asked Questions</h2>
+
+    <p class="faq-q">What is LogicTutor?</p>
+    <p>LogicTutor is an educational app for propositional logic on iPhone and iPad. It parses logical formulas, generates complete truth tables, converts formulas to CNF/DNF step by step, checks satisfiability with an on-device SAT solver, and offers an exercise library with a wrong-question book — all running locally on your device.</p>
+
+    <p class="faq-q">Does LogicTutor require an internet connection?</p>
+    <p>No. The entire logic engine — parsing, truth tables, normal forms, SAT solving, exercises, history and PDF export — works completely offline. The only feature that uses the network is the optional AI parsing, which sends only the sentence you type directly to the AI provider you configure.</p>
+
+    <p class="faq-q">What is the largest formula LogicTutor can handle?</p>
+    <p>Truth tables cover formulas with up to 10 distinct variables exactly. Beyond that, the App switches to a DPLL SAT solver, so satisfiability, classification and models remain available even when a full table would have millions of rows. CNF/DNF conversion warns you instead of hanging if a result would grow beyond practical size.</p>
+
+    <p class="faq-q">Why is my answer marked correct even though it looks different from the model answer?</p>
+    <p>Exercise grading compares formulas by logical equivalence, not by string equality. Any formula that is true under exactly the same conditions as the model answer is accepted — for example, both <code>P → Q</code> and <code>¬P ∨ Q</code> are correct answers to the same exercise.</p>
+
+    <p class="faq-q">Where is my data stored?</p>
+    <p>Entirely on your device. History, exercise results and the wrong-question book live in a local database inside the App's sandbox; preferences live in iOS settings; the AI API key lives in the iOS Keychain. Nothing is uploaded, and uninstalling the App removes everything.</p>
+
+    <p class="faq-q">Does LogicTutor collect any personal data?</p>
+    <p>No. LogicTutor does not collect, store, or transmit any personal information. There are no accounts, no analytics, and no tracking. See our <a href="https://daibou007.github.io/PrivacyAndSupport/LogicTutor/privacy.html">Privacy Policy</a> for details.</p>
+
+    <p class="faq-q">Why did AI parsing return a wrong formula?</p>
+    <p>AI models sometimes misread ambiguous sentences. The returned formula is always re-checked by the built-in engine, so compare it against your intent using the truth table, then rephrase or edit by hand. You can also disable the feature at any time in <em>Settings → LLM Settings</em>.</p>
+
+    <p class="faq-q">What devices does LogicTutor support?</p>
+    <p>LogicTutor runs on iPhone and iPad and requires iOS or iPadOS 17.6 or later. The layout adapts to both screen sizes.</p>
+
+    <p class="faq-q">The app crashed or isn't working properly. What should I do?</p>
+    <p>Try force-quitting and relaunching the app. If issues persist, please email us at <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a> with the formula you were analyzing and your device model &amp; iOS or iPadOS version.</p>
+
+    <hr>
+
+    <!-- FOOTER -->
+    <h2>Still Need Help?</h2>
+    <div class="contact-box">
+        <p>We're happy to help with any questions or feedback.</p>
+        <p><strong>Email: <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a></strong></p>
+        <p style="color:#666; font-size:14px;">Response time: within 24 hours on business days.</p>
+    </div>
+
+    <hr>
+    <p style="text-align: center; color: #999; font-size: 13px; margin-bottom: 8px;">Last Updated: September 16, 2026</p>
+    <p style="text-align: center; color: #999; font-size: 13px;">Copyright: © 2026 Daibou007 Team. All rights reserved.</p>
+    <p style="text-align: center; color: #999; font-size: 13px;">Studio name: Daibou007 Team</p>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – LogicTutor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        body { max-width: 850px; margin: 50px auto; padding: 0 20px; line-height: 1.7; color: #333; }
+        h1 { color: #1a1a1a; margin-bottom: 30px; font-size: 30px; text-align: center; }
+        h2 { color: #2c2c2c; margin: 30px 0 15px; font-size: 22px;
+             border-left: 4px solid #3B82F6; padding-left: 10px; }
+        p  { margin-bottom: 15px; font-size: 16px; }
+        ul { margin-left: 25px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        a  { color: #3B82F6; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .last-update { color: #666; text-align: center; margin-bottom: 40px; font-style: italic; }
+        .highlight { background: #eff6ff; border-left: 4px solid #3B82F6;
+                     padding: 14px 18px; border-radius: 4px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Privacy Policy</h1>
+    <p class="last-update">Last Updated: September 16, 2026</p>
+
+    <div class="highlight">
+        <p><strong>Summary:</strong> LogicTutor is an offline-first propositional logic study toolkit. All of your formulas, analysis history, exercise records and preferences stay entirely on your device. We do not collect, store, or transmit any personal information. The single optional exception is AI parsing: it is off by default, and if you enable it, only the text you type for a request is sent directly to the AI provider you configure with your own API key — never through us.</p>
+    </div>
+
+    <h2>1. Introduction</h2>
+    <p>This Privacy Policy describes how LogicTutor ("we", "our", or "the App") handles information when you use our iPhone and iPad application. LogicTutor is an educational app for propositional logic: it parses logical formulas, generates truth tables, converts formulas to CNF/DNF with step-by-step derivations, checks satisfiability, tautology and contradiction, offers an exercise library with a wrong-question book, and exports results as PDF. All logic analysis runs entirely on your device — there is no account, no server of ours, and no tracking.</p>
+    <p>By using LogicTutor, you agree to the practices described in this policy.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>LogicTutor does <strong>not</strong> collect any personal information. Specifically:</p>
+    <ul>
+        <li>We do not require you to create an account or sign in.</li>
+        <li>We do not collect your name, email address, or any contact information.</li>
+        <li>We do not use analytics SDKs or track your usage behavior.</li>
+        <li>We do not collect device identifiers or advertising IDs.</li>
+        <li>We do not upload your formulas, history, exercise records, or any content to any server.</li>
+        <li>We do not display advertising, and we do not share data with data brokers.</li>
+    </ul>
+    <p>LogicTutor makes no network requests of its own. The only time the App uses the network is the optional AI parsing feature described in Section 5, and the only time it opens a web page is when you deliberately tap a legal or App Store link in Settings — that page then opens in your system browser, under your browser's own privacy policy.</p>
+
+    <h2>3. Permissions and Device Access</h2>
+    <p>LogicTutor requests <strong>no</strong> device permissions. It does not ask for access to your camera, microphone, photos, contacts, location, health data, Bluetooth, or any other sensitive device resource.</p>
+    <p>When you export a truth table or analysis as a PDF, the finished file is handed to the standard iOS share sheet — you choose the destination, and iOS performs the transfer.</p>
+
+    <h2>4. Data Storage</h2>
+    <p>Everything you create is stored locally on your device:</p>
+    <ul>
+        <li><strong>Analysis history, exercise results and the wrong-question book</strong> — kept in a local database inside the App's own sandbox, protected by iOS file protection (encrypted at rest while your device is locked).</li>
+        <li><strong>Preferences</strong> — theme selection, formula font size and similar settings are kept in iOS system preferences on your device.</li>
+        <li><strong>AI parsing configuration</strong> — your on/off choice and model selection are kept locally; see Section 5 for where the API key is stored.</li>
+    </ul>
+    <p>None of this data is transmitted anywhere. Deleting the App removes all of it permanently.</p>
+
+    <h2>5. AI Natural-Language Parsing (Optional)</h2>
+    <p>LogicTutor offers an optional feature that converts a natural-language sentence you type into a propositional logic formula, using a large language model (LLM). How it works:</p>
+    <ul>
+        <li><strong>Off by default.</strong> Nothing is sent anywhere until you explicitly enable the feature in <em>Settings → LLM Settings</em>.</li>
+        <li><strong>Your own key.</strong> The feature requires you to supply your own API key for an AI provider. The key is stored only in the iOS Keychain on your device; it is never transmitted to us (we have no server) and is used only to sign your requests to that provider.</li>
+        <li><strong>Direct to the provider.</strong> When you submit a request, the text you typed is sent over an encrypted connection directly from your device to the AI service endpoint you configured, to be converted into a formula. The request does not pass through any server operated by us, and we never receive a copy.</li>
+        <li><strong>On-device verification.</strong> The returned formula is re-parsed and analyzed by the built-in on-device logic engine, so results are always checked locally before being shown.</li>
+        <li><strong>Always under your control.</strong> You can disable the feature or remove your key at any time in <em>Settings → LLM Settings</em>.</li>
+    </ul>
+    <p>AI-generated output may be inaccurate. Please verify converted formulas with the App's built-in analysis tools before relying on them.</p>
+
+    <h2>6. Third-Party Services</h2>
+    <p>LogicTutor does not integrate any third-party analytics, advertising, crash-reporting, or social login services. The only third-party interaction possible is the AI provider you configure for the optional parsing feature (Section 5); any data sent to that provider is governed by that provider's own privacy policy. Otherwise, the App is built entirely on Apple system frameworks, and no data is shared with any third party.</p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>LogicTutor does not collect personal information from anyone, including children under the age of 13. The App is rated 4+ on the App Store and is safe for all ages.</p>
+
+    <h2>8. Your Rights</h2>
+    <p>Because we collect no personal data, there is nothing for us to access, correct, or delete on our end. All your data lives on your device and can be removed simply by uninstalling the App. Your AI configuration and key can be erased at any time from <em>Settings → LLM Settings</em>.</p>
+    <p>If you have questions or concerns, please contact us at <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a>.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy occasionally. Any changes will be posted on this page with a revised "Last Updated" date. We encourage you to review this page periodically.</p>
+
+    <h2>10. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, please reach out:</p>
+    <p>Email: <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a></p>
+
+    <hr style="border: none; border-top: 1px solid #eee; margin: 40px 0;">
+    <p style="text-align: center; color: #999; font-size: 13px;">Copyright: © 2026 Daibou007 Team. All rights reserved.</p>
+    <p style="text-align: center; color: #999; font-size: 13px;">Studio name: Daibou007 Team</p>
+</body>
+</html>
