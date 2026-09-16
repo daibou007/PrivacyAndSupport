@@ -73,7 +73,7 @@
     <ul>
         <li><strong>Exhaustive and exact</strong> — formulas with up to 10 distinct variables get a complete row-by-row table; every row shows the value of each subexpression, not just the final result.</li>
         <li><strong>Classification</strong> — the App reports whether the formula is a tautology (always true), a contradiction (always false), or contingent, directly from the table.</li>
-        <li><strong>Find rows fast</strong> — use the row filters to jump to the rows where the formula is true or false — handy for reading off satisfying assignments.</li>
+        <li><strong>Find rows fast</strong> — sort satisfying rows to the top to read off the assignments that make the formula true at a glance.</li>
     </ul>
 
     <!-- 4. CNF / DNF -->
@@ -94,14 +94,18 @@
     <!-- 6. Exercises -->
     <h3>📚 6. Exercises &amp; Wrong-Question Book</h3>
     <ul>
-        <li><strong>Practice library</strong> — work through exercises organized by topic: parsing, truth tables, equivalence, CNF/DNF and satisfiability.</li>
-        <li><strong>Fair grading</strong> — answers are compared by logical equivalence, so any correct form of the formula is accepted, not just one exact string.</li>
-        <li><strong>Wrong-question book</strong> — every mistake is collected for review; retry an exercise any time with <em>Try Again</em>.</li>
+        <li><strong>Practice library</strong> — 108 exercises organized by topic: formula basics &amp; translation, truth tables, logical equivalence, normal forms, satisfiability and inference rules. Filter by category or search by keyword.</li>
+        <li><strong>Fair grading</strong> — answers are compared by logical equivalence, so any correct form of the formula is accepted, not just one exact string. Yes/no and numeric answers are accepted case-insensitively.</li>
+        <li><strong>Progress tracking</strong> — the summary shows how many exercises you have completed and how many you answered correctly; every attempt is recorded.</li>
+        <li><strong>Wrong-question book</strong> — every mistake is collected with your answer and the correct one for review, and a question leaves the book automatically once you answer it correctly.</li>
     </ul>
 
     <!-- 7. History -->
     <h3>🕘 7. History &amp; Reuse</h3>
-    <p>Every analysis you run is saved to History with its formula, date and classification. Tap <em>Reuse</em> on any entry to send that formula to another tool — truth table, normal form, SAT reasoning or exercises — without retyping it.</p>
+    <p>Every analysis you run is saved to History with its formula, date, classification and the tool that produced it. You can search, mark entries as favorites, filter to favorites only, and export the whole list as a PDF.</p>
+    <div class="step">
+        <p><strong>Reuse in one tap:</strong> tap <em>Reuse</em> on an entry and it opens the matching tool directly — a truth-table record reopens the truth table, a CNF/DNF record reopens the conversion — with the formula already filled in. Tap <em>Back</em> and you return straight to History.</p>
+    </div>
 
     <!-- 8. PDF export -->
     <h3>📄 8. PDF Export</h3>
@@ -126,7 +130,8 @@
     <ul>
         <li><strong>Light &amp; dark</strong> — choose System, Light or Dark; the whole App follows instantly.</li>
         <li><strong>Formula font size</strong> — adjust the size used across formula inputs for comfortable reading.</li>
-        <li><strong>Guides</strong> — replay the welcome guide at any time from Settings.</li>
+        <li><strong>LaTeX High Definition</strong> — increase the preview rendering size for sharper formula previews.</li>
+        <li><strong>User Manual</strong> — replay the welcome guide at any time from Settings.</li>
     </ul>
 
     <hr>
@@ -135,7 +140,13 @@
     <h2>Frequently Asked Questions</h2>
 
     <p class="faq-q">What is LogicTutor?</p>
-    <p>LogicTutor is an educational app for propositional logic on iPhone and iPad. It parses logical formulas, generates complete truth tables, converts formulas to CNF/DNF step by step, checks satisfiability with an on-device SAT solver, and offers an exercise library with a wrong-question book — all running locally on your device.</p>
+    <p>LogicTutor is an educational app for propositional logic on iPhone and iPad. It parses logical formulas, generates complete truth tables, converts formulas to CNF/DNF step by step, checks satisfiability with an on-device SAT solver, and offers a 108-question exercise library with a wrong-question book — all running locally on your device.</p>
+
+    <p class="faq-q">How many exercises are included, and what topics do they cover?</p>
+    <p>The library ships with 108 exercises organized by topic: formula basics &amp; translation, operator precedence, truth tables, logical equivalence, normal forms (CNF/DNF), satisfiability, and inference rules. Formula answers are graded by logical equivalence, and the wrong-question book collects anything you miss until you answer it correctly.</p>
+
+    <p class="faq-q">What does Reuse on a history entry do?</p>
+    <p>It sends the stored formula back to the tool that produced the record — truth table, CNF/DNF, SAT reasoning or the formula page — with the formula already filled in, and Back returns you straight to History. Records created by the optional AI parsing open on the formula page.</p>
 
     <p class="faq-q">Does LogicTutor require an internet connection?</p>
     <p>No. The entire logic engine — parsing, truth tables, normal forms, SAT solving, exercises, history and PDF export — works completely offline. The only feature that uses the network is the optional AI parsing, which sends only the sentence you type directly to the AI provider you configure.</p>
@@ -172,7 +183,7 @@
     </div>
 
     <hr>
-    <p style="text-align: center; color: #999; font-size: 13px; margin-bottom: 8px;">Last Updated: September 16, 2026</p>
+    <p style="text-align: center; color: #999; font-size: 13px; margin-bottom: 8px;">Last Updated: September 17, 2026</p>
     <p style="text-align: center; color: #999; font-size: 13px;">Copyright: © 2026 Daibou007 Team. All rights reserved.</p>
     <p style="text-align: center; color: #999; font-size: 13px;">Studio name: Daibou007 Team</p>
 </body>
