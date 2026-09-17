@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy – Cort Mind</title>
+    <title>Privacy Policy – CoRT Circle</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
@@ -11,6 +11,8 @@
         h1 { color: #1a1a1a; margin-bottom: 30px; font-size: 30px; text-align: center; }
         h2 { color: #2c2c2c; margin: 30px 0 15px; font-size: 22px;
              border-left: 4px solid #6C5CE7; padding-left: 10px; }
+        h3 { color: #3a3a3a; margin: 22px 0 10px; font-size: 17px; }
+        h4 { color: #3a3a3a; margin: 18px 0 8px; font-size: 16px; }
         p  { margin-bottom: 15px; font-size: 16px; }
         ul { margin-left: 25px; margin-bottom: 15px; }
         li { margin-bottom: 8px; }
@@ -19,22 +21,33 @@
         .last-update { color: #666; text-align: center; margin-bottom: 40px; font-style: italic; }
         .highlight { background: #f5f3ff; border-left: 4px solid #6C5CE7;
                      padding: 14px 18px; border-radius: 4px; margin-bottom: 20px; }
+        .contact-box { background: #f5f3ff; border: 1px solid #d8d0ff;
+                       padding: 22px 24px; border-radius: 10px; margin: 20px 0; }
+        .contact-box p { margin-bottom: 6px; }
+        .step { background: #fafafa; border: 1px solid #eee; border-radius: 8px;
+                padding: 14px 18px; margin-bottom: 12px; }
+        .step strong { color: #6C5CE7; }
+        .tip { background: #fffbe6; border-left: 4px solid #f0c040;
+               padding: 10px 16px; border-radius: 4px; margin: 12px 0; font-size: 14px; }
+        .faq-q { font-weight: 600; color: #1a1a1a; margin-top: 18px; margin-bottom: 6px; }
+        hr { border: none; border-top: 1px solid #eee; margin: 40px 0; }
+        code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-family: 'SF Mono', Monaco, monospace; }
     </style>
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="last-update">Last Updated: April 19, 2026</p>
+    <p class="last-update">Last Updated: September 17, 2026</p>
 
     <div class="highlight">
-        <p><strong>Summary:</strong> Cort Mind is a privacy-first thinking tools app. Your thinking sessions and notes stay on your device. AI analysis is optional and only uses your personal Anthropic API key when you choose to enable it.</p>
+        <p><strong>Summary:</strong> CoRT Circle is a privacy-first thinking tools app. Your thinking sessions, notes, chat and AI history stay on your device. All AI features are optional and only use your personal API key with the AI provider you choose.</p>
     </div>
 
     <h2>1. Introduction</h2>
-    <p>This Privacy Policy describes how Cort Mind ("we", "our", or "the App") handles information when you use our mobile application. Cort Mind is designed to be an offline-first productivity tool that helps you think more clearly using structured thinking frameworks.</p>
-    <p>By using Cort Mind, you agree to the practices described in this policy.</p>
+    <p>This Privacy Policy describes how CoRT Circle ("we", "our", or "the App") handles information when you use our mobile application. CoRT Circle is designed to be an offline-first productivity tool that helps you think more clearly using structured thinking frameworks.</p>
+    <p>By using CoRT Circle, you agree to the practices described in this policy.</p>
 
     <h2>2. Information We Collect</h2>
-    <p>Cort Mind does <strong>not</strong> collect any personal information by default. Specifically:</p>
+    <p>CoRT Circle does <strong>not</strong> collect any personal information by default. Specifically:</p>
     <ul>
         <li>We do not require you to create an account or sign in.</li>
         <li>We do not collect your name, email address, or any contact information.</li>
@@ -42,27 +55,28 @@
         <li>We do not collect device identifiers or advertising IDs.</li>
         <li>We do not collect location data or device sensors.</li>
     </ul>
-    <p>All your thinking sessions, handwritten notes, and app preferences are stored locally on your device using iOS system storage and are never transmitted anywhere without your explicit action.</p>
+    <p>All your thinking sessions, handwritten notes, AI Coach conversations, Thinking Chain sessions, Diverge history, and app preferences are stored locally on your device using iOS system storage and are never transmitted anywhere without your explicit action.</p>
 
     <h2>3. Photo Library Permission</h2>
-    <p>Cort Mind requests access to your photo library only when you explicitly choose to save handwritten notes or diagrams as images. This permission is used solely to save exported content to your photo library - we never read, scan, or upload any existing photos from your library.</p>
-    <p>You can revoke photo library permission at any time in iOS Settings → Privacy & Security → Photos → Cort Mind.</p>
+    <p>CoRT Circle requests access to your photo library only when you explicitly choose to save handwritten notes or diagrams as images. This permission is used solely to save exported content to your photo library - we never read, scan, or upload any existing photos from your library.</p>
+    <p>You can revoke photo library permission at any time in iOS Settings → Privacy &amp; Security → Photos → CoRT Circle.</p>
 
-    <h2>4. Optional AI Analysis</h2>
-    <p>Cort Mind offers optional AI-powered analysis of your thinking sessions using Anthropic's Claude AI. This feature works as follows:</p>
+    <h2>4. Optional AI Features</h2>
+    <p>CoRT Circle offers optional AI-powered features: <strong>AI Coach</strong> (a conversational coach that can propose in-app actions such as creating sessions, filling tools, running chains and exporting), <strong>Thinking Chain</strong> (a guided six-tool analysis), <strong>PI Diverge</strong> (lateral-thinking expansion), and per-step AI analysis, polish and scoring. These features work as follows:</p>
     <ul>
-        <li><strong>You provide your own Anthropic API key</strong> - we never supply or manage API keys</li>
-        <li><strong>API keys are stored securely</strong> in the iOS Keychain on your device only</li>
-        <li><strong>Your thinking content is sent to Anthropic</strong> only when you tap "AI Analysis" and only with your API key</li>
-        <li><strong>We do not store or transmit your API key</strong> - it goes directly from your device to Anthropic's servers</li>
-        <li><strong>AI analysis is completely optional</strong> - the app works fully offline without it</li>
+        <li><strong>You provide your own API key</strong> for the AI provider you choose — Anthropic, OpenAI, Google Gemini, or any Anthropic-compatible endpoint you configure. We never supply or manage API keys.</li>
+        <li><strong>API keys are stored securely</strong> in the iOS Keychain on your device only.</li>
+        <li><strong>Your content is sent only to the provider you configured</strong>, over HTTPS, and only when you use an AI feature with your key. When the AI Coach proposes in-app actions, a local audit log is kept on your device recording what was executed.</li>
+        <li><strong>We do not store or transmit your API key</strong> anywhere else - it goes directly from your device to the provider's servers.</li>
+        <li><strong>AI features are completely optional</strong> - the app works fully offline without them.</li>
     </ul>
-    <p>When you use AI analysis, your thinking content and API key are transmitted to Anthropic's servers according to Anthropic's privacy policy and terms of service. We do not intercept, store, or have access to this data.</p>
+    <p>When you use an AI feature, your content and API key are transmitted to your chosen provider's servers according to that provider's privacy policy and terms of service. We do not intercept, store, or have access to this data.</p>
 
     <h2>5. Data Storage</h2>
     <p>All data generated by the App is stored exclusively on your device:</p>
     <ul>
-        <li><strong>Thinking sessions and notes</strong> - stored in iOS Core Data and document files</li>
+        <li><strong>Thinking sessions, notes, chat and AI history</strong> - stored in local document files</li>
+        <li><strong>AI action audit log</strong> - stored as a local file on your device</li>
         <li><strong>App preferences and settings</strong> - stored in iOS UserDefaults</li>
         <li><strong>API keys</strong> - stored securely in iOS Keychain</li>
         <li><strong>Export files</strong> - saved to your chosen location (Files app, Photos, etc.)</li>
@@ -70,21 +84,21 @@
     <p>Uninstalling the App will permanently delete all locally stored data except for any files you explicitly exported to other locations.</p>
 
     <h2>6. Third-Party Services</h2>
-    <p>Cort Mind integrates with the following third-party services:</p>
+    <p>CoRT Circle integrates with the following third-party services:</p>
     <ul>
-        <li><strong>Anthropic API</strong> - for optional AI analysis (only when you provide an API key and explicitly request analysis)</li>
+        <li><strong>The AI provider you configure</strong> (Anthropic, OpenAI, Google Gemini, or a custom Anthropic-compatible endpoint) - for optional AI features (only when you provide an API key and explicitly use a feature)</li>
         <li><strong>iOS Photos Framework</strong> - for saving exported images to your photo library (only when you explicitly choose to save)</li>
     </ul>
-    <p>We do not integrate any analytics, advertising, crash-reporting, or social services. No data is shared with any third party except as described above for AI analysis.</p>
+    <p>We do not integrate any analytics, advertising, crash-reporting, or social services. No data is shared with any third party except as described above for the AI features.</p>
 
     <h2>7. Children's Privacy</h2>
-    <p>Cort Mind does not collect personal information from anyone, including children under the age of 13. The App is safe for all ages and can help develop critical thinking skills.</p>
+    <p>CoRT Circle does not collect personal information from anyone, including children under the age of 13. The App is safe for all ages and can help develop critical thinking skills.</p>
 
     <h2>8. Your Rights</h2>
     <p>Because we collect no personal data by default, there is nothing for us to access, correct, or delete on our end. All your data lives on your device and can be removed by:</p>
     <ul>
         <li>Uninstalling the App (removes all sessions and settings)</li>
-        <li>Deleting individual sessions within the app</li>
+        <li>Deleting individual sessions or history entries within the app</li>
         <li>Manually deleting exported files from your photo library or files</li>
     </ul>
     <p>If you have questions or concerns, please contact us at <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a>.</p>
