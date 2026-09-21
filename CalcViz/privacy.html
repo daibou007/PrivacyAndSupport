@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CalcViz — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; max-width: 46rem; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #10141C; background: #F6F8FC;
+  }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .6rem; }
+  .lede { color: #4A5060; margin: 0 0 2rem; }
+  .meta { color: #8A94A6; font-size: .875rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .35rem 0; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .callout {
+    background: #EDF4FF; border-left: 3px solid #2D7FF9;
+    padding: .9rem 1.1rem; border-radius: 8px; margin: 1.5rem 0;
+  }
+  footer { margin-top: 3rem; color: #8A94A6; font-size: .875rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #F2F5FA; background: #0B0E17; }
+    .lede { color: #B0BACC; }
+    .meta, footer { color: #717A8C; }
+    .callout { background: #141927; border-left-color: #3B8BFA; }
+    a { color: #72ACFF; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy — CalcViz</h1>
+<p class="lede">CalcViz is an offline calculus tool for iPhone and iPad. It has no account, no advertising and no analytics, and it does not collect personal data.</p>
+<p class="meta">Last updated: 21 September 2026</p>
+
+<div class="callout">
+  <strong>The short version.</strong> Everything CalcViz calculates is calculated on your device. Nothing about you or your work is transmitted to us, because there is nothing in the app that transmits it. The only network feature is optional, off by default, and sends your text to an endpoint you configure with your own API key.
+</div>
+
+<h2>1. Who we are</h2>
+<p>CalcViz is published by Daibou007 Team ("we", "us"). This policy explains what happens to information when you use the app. It applies to the CalcViz application and nothing else.</p>
+
+<h2>2. Information we collect</h2>
+<p><strong>We collect no personal information.</strong> Specifically, CalcViz does not:</p>
+<ul>
+  <li>create or require an account, a sign-in, or a profile;</li>
+  <li>collect your name, email address, phone number, or contacts;</li>
+  <li>collect location data of any kind;</li>
+  <li>collect device identifiers, advertising identifiers, or usage analytics;</li>
+  <li>contain advertising, marketing pop-ups, or third-party tracking SDKs;</li>
+  <li>use cookies or any equivalent tracking technology.</li>
+</ul>
+
+<h2>3. Information stored on your device</h2>
+<p>CalcViz saves your work locally so the app is useful between sessions. This data stays in the app's own storage on your device and is never uploaded:</p>
+<ul>
+  <li><strong>History</strong> — the functions you have plotted, the module each came from, and which you have starred. Capped at 500 records.</li>
+  <li><strong>Saved problems</strong> — the English text you typed into the Problem Solver and the formula extracted from it. Capped at 200 records.</li>
+  <li><strong>AI conversations</strong> — if you use the assistant, the messages in each chat. Capped at 50 chats.</li>
+  <li><strong>Preferences</strong> — your appearance choice, formula font size, plot defaults and calculation settings.</li>
+</ul>
+<p>You can delete any of this at any time from within the app: history and chats can be deleted individually or cleared entirely, and deleting the app removes all of it.</p>
+
+<h2>4. The optional AI features</h2>
+<p>CalcViz has two optional AI features — the Problem Solver and the AI Assistant. Both are <strong>off by default</strong> and neither works until you enable it and supply your own API key.</p>
+<p>When you use them:</p>
+<ul>
+  <li>The English text you type is sent to the API endpoint <em>you</em> configured, using the API key <em>you</em> supplied. It goes to that provider, not to us.</li>
+  <li>The request also includes the list of app operations the assistant is permitted to use, so the model knows what it may ask the app to do.</li>
+  <li>Your API key is stored in the iOS Keychain, readable only by this app. It is never written to preferences, never logged, and never sent anywhere except that provider.</li>
+  <li>Your functions, plots, history and saved work are <strong>never</strong> transmitted. The mathematics is done locally, and the model never sees it.</li>
+</ul>
+<p>The provider's own privacy policy governs what they do with the text you send them. We have no visibility into it and receive no copy of it.</p>
+
+<h2>5. Children's privacy</h2>
+<p>CalcViz collects no personal information from anyone, including children under 13. Because no data is collected, no verifiable parental consent is required under COPPA. The app presents no advertising and contains no social features or user-generated content sharing.</p>
+
+<h2>6. Your rights under the CCPA and similar laws</h2>
+<p>The California Consumer Privacy Act, the GDPR and comparable regimes grant rights of access, deletion, correction and opt-out of the sale of personal information. Because CalcViz collects no personal information at all, there is nothing for us to disclose, delete, correct or sell. We do not sell or share personal information, and we have not done so in the preceding twelve months.</p>
+
+<h2>7. Data security</h2>
+<p>Your work is protected by the app sandbox and, where you have enabled it, by your device passcode and iOS data protection. API keys are stored in the Keychain with the <code>AfterFirstUnlockThisDeviceOnly</code> accessibility class, which keeps them off backups and off other devices.</p>
+
+<h2>8. Changes to this policy</h2>
+<p>If this policy changes, the revised version will be posted at this address with a new "last updated" date. Material changes will also be described in the app's App Store release notes.</p>
+
+<h2>9. Contact</h2>
+<p>Questions about this policy: <a href="support.html">open a support request</a>.</p>
+
+<footer>© <span id="y">2026</span> Daibou007 Team. CalcViz is an independent educational tool and is not affiliated with Apple Inc.</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

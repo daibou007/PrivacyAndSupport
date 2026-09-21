@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CalcViz — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; max-width: 46rem; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #10141C; background: #F6F8FC;
+  }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .6rem; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .35rem; }
+  .lede { color: #4A5060; margin: 0 0 2rem; }
+  .meta { color: #8A94A6; font-size: .875rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .35rem 0; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: .92em; background: rgba(45,127,249,.1);
+    padding: .1em .35em; border-radius: 4px;
+  }
+  .callout {
+    background: #EDF4FF; border-left: 3px solid #2D7FF9;
+    padding: .9rem 1.1rem; border-radius: 8px; margin: 1.5rem 0;
+  }
+  .qa { border-top: 1px solid rgba(128,140,160,.25); padding-top: 1.1rem; }
+  footer { margin-top: 3rem; color: #8A94A6; font-size: .875rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #F2F5FA; background: #0B0E17; }
+    .lede { color: #B0BACC; }
+    .meta, footer { color: #717A8C; }
+    .callout { background: #141927; border-left-color: #3B8BFA; }
+    code { background: rgba(59,139,250,.16); }
+    a { color: #72ACFF; }
+  }
+</style>
+</head>
+<body>
+
+<h1>CalcViz Support</h1>
+<p class="lede">Help with the CalcViz app. Most questions are answered below; if yours is not, send us a request and we will reply.</p>
+<p class="meta">Last updated: 21 September 2026</p>
+
+<div class="callout">
+  <strong>Contact.</strong> Email <a href="mailto:support@daibou007.com">support@daibou007.com</a> with your device model, your iOS version, and the exact function or problem you were working on. The app's version number is at the bottom of Settings, and in Settings → About.
+</div>
+
+<h2>Common questions</h2>
+
+<div class="qa">
+<h3>My function will not plot, or the field says "not a valid expression".</h3>
+<p>Check these first, in order:</p>
+<ul>
+  <li>Multiplication must be explicit or unambiguous. <code>2x</code> and <code>3sin(x)</code> are fine; <code>x y</code> with a space is not.</li>
+  <li>Function names need parentheses: write <code>sin(x)</code>, not <code>sin x</code>.</li>
+  <li>Parentheses must balance. The error message names the position of the unmatched bracket.</li>
+  <li><code>log(x)</code> means the natural logarithm in CalcViz, matching calculus convention. Use <code>log10(x)</code> for base 10.</li>
+  <li>Only single letters are variables. <code>rate</code> is not a variable name — <code>r*a*t*e</code> is what you would get.</li>
+</ul>
+<p>Settings → User Manual → "Function Input Rules" lists the full syntax.</p>
+</div>
+
+<div class="qa">
+<h3>The curve has gaps in it, but the function is defined there.</h3>
+<p>Most often it is not defined there, and the gap is correct — <code>1/x</code> really does not exist at zero. If you believe the gap is wrong, check the domain: <code>ln(x)</code> and <code>sqrt(x)</code> are undefined for negative arguments and half the plot will legitimately be empty. If it still looks wrong, send us the function and the domain you used.</p>
+</div>
+
+<div class="qa">
+<h3>Why does the integral page say "no elementary closed form"?</h3>
+<p>Because there genuinely is not one for many integrands — <code>exp(-x^2)</code> is the classic example, and no amount of computing will produce one. CalcViz states this rather than inventing a formula, and reports the accurate numerical value instead. The symbolic table covers polynomials, powers, <code>1/x</code>, the trigonometric functions, exponentials and their linear composites.</p>
+</div>
+
+<div class="qa">
+<h3>The 3D surface is not drawn, or says Metal is unavailable.</h3>
+<p>Some simulator configurations and very old hardware cannot provide a Metal device. The Surface tab's Contours and Gradient views work without it and show the same mathematics. On a real device running iOS 17.6 or later this should not occur; if it does, tell us your device model.</p>
+</div>
+
+<div class="qa">
+<h3>How do I turn on the AI features?</h3>
+<p>They are off by default. Go to Settings → AI Assistant &amp; Problem Solver, enable the feature, choose a provider, and paste your own API key. You need an account with that provider; the key is stored in the iOS Keychain and is never sent anywhere except the endpoint you configure. Use "Test Connection" to confirm it works before you rely on it.</p>
+</div>
+
+<div class="qa">
+<h3>The AI extracted the wrong formula.</h3>
+<p>That happens, and the app is built for it: the extracted formula appears in an editable field before anything is computed. Correct it there and continue — the engine works from your corrected version, not from the model's. You can also run a back-translation check, which asks the model to restate the problem its formula describes, so you can see whether the reading is sound.</p>
+</div>
+
+<div class="qa">
+<h3>How do I get my work out of the app?</h3>
+<p>Open the Graph or Surface tab's toolbar menu and choose Export. Plots export as PNG; the derivation exports as a PDF containing the function, the figure, the analysis and every derivation step. Both go straight to the iOS share sheet, so you can save to Files, mail them, or send them to another app.</p>
+</div>
+
+<div class="qa">
+<h3>I deleted something. Can I get it back?</h3>
+<p>No — deletions are permanent, which is why every one of them is confirmed first and names what is about to go. Clearing history keeps your starred records unless you explicitly turn that off. If you have an iCloud or Finder backup from before the deletion, restoring the device or the app's data will bring it back.</p>
+</div>
+
+<div class="qa">
+<h3>How do I replay the welcome guide or the Home tutorial?</h3>
+<p>Settings → Guides &amp; Help → "Replay Welcome Guide" or "Replay Home Tutorial". The Home tutorial is the set of coach marks that walks through the Home page's input field, module shortcuts and recent list.</p>
+</div>
+
+<div class="qa">
+<h3>Does CalcViz work offline?</h3>
+<p>Yes, entirely — except for the two optional AI features, which by definition send your text to the endpoint you configured. Every derivative, integral, surface and gradient is computed on your device with no network connection at all.</p>
+</div>
+
+<div class="qa">
+<h3>Is there a subscription or an in-app purchase?</h3>
+<p>No. CalcViz is a one-time purchase. There is no account, no sign-in, no subscription and nothing to buy inside the app.</p>
+</div>
+
+<h2>Reporting a problem</h2>
+<p>To help us fix something quickly, include:</p>
+<ul>
+  <li>your device model and iOS version;</li>
+  <li>the CalcViz version, from Settings → About;</li>
+  <li>the exact function or text you entered, copied rather than retyped;</li>
+  <li>what you expected and what happened instead;</li>
+  <li>a screenshot, if the problem is visual.</li>
+</ul>
+
+<h2>Feature requests</h2>
+<p>We are interested in what would make CalcViz more useful for AP Calculus and first-year university courses. Send requests to the address above.</p>
+
+<footer>© <span id="y">2026</span> Daibou007 Team. CalcViz is an independent educational tool and is not affiliated with Apple Inc.</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
