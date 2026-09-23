@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LinearAlgebraViz — Terms of Service</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; max-width: 46rem; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1D1D1F; background: #FFFFFF;
+  }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .6rem; }
+  .lede { color: #6E6E73; margin: 0 0 2rem; }
+  .meta { color: #8A909C; font-size: .875rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .35rem 0; }
+  .callout {
+    background: #EDF4FF; border-left: 3px solid #2573E8;
+    padding: .9rem 1.1rem; border-radius: 8px; margin: 1.5rem 0;
+  }
+  footer { margin-top: 3rem; color: #8A909C; font-size: .875rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #F5F5F7; background: #0F1118; }
+    .lede { color: #86868B; }
+    .meta, footer { color: #6A6F7C; }
+    .callout { background: #1A2740; border-left-color: #3B88F5; }
+    a { color: #7CB6FF; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Terms of Service — LinearAlgebraViz</h1>
+<p class="lede">These terms govern your use of the LinearAlgebraViz application. By using LinearAlgebraViz you agree to them.</p>
+<p class="meta">Last updated: 23 September 2026</p>
+
+<div class="callout">
+  <strong>The short version.</strong> LinearAlgebraViz is an educational tool, not a substitute for your course, your textbook or your instructor. Use it to check your own working, not to replace it. You pay once and own the app; there is no subscription and no in-app purchase.
+</div>
+
+<h2>1. Licence</h2>
+<p>LinearAlgebraViz is licensed, not sold, to you for use on Apple devices you own or control, in accordance with Apple's standard End User Licence Agreement for licensed applications and the App Store Terms of Service. Your purchase is a one-time purchase; there are no subscriptions, no in-app purchases and no additional charges within the app.</p>
+
+<h2>2. Permitted use</h2>
+<p>You may use LinearAlgebraViz for personal study, teaching and professional work. You may not:</p>
+<ul>
+  <li>reverse engineer, decompile or disassemble the app, except to the extent permitted by applicable law;</li>
+  <li>redistribute, sublicense, rent, lease or sell the app or access to it;</li>
+  <li>remove or alter any copyright, trademark or attribution notice;</li>
+  <li>use the app in a way that violates any applicable law or regulation.</li>
+</ul>
+
+<h2>3. Educational use and academic integrity</h2>
+<p>LinearAlgebraViz is intended to help you understand linear algebra, not to do your coursework for you. Whether and how you may use computational tools on an assignment, quiz or examination is determined by your school, your instructor and your course's academic integrity policy. <strong>You are responsible for complying with that policy.</strong> Submitting the app's output as your own work where that is prohibited is a violation of those rules and not of these terms — but it is not what the app is for.</p>
+
+<h2>4. Accuracy and limitations</h2>
+<p>LinearAlgebraViz computes determinants, ranks, inverses, decompositions, eigenpairs and solution sets using the algorithms described in its built-in user manual. Those algorithms have limits, which the app states where they apply:</p>
+<ul>
+  <li>All arithmetic runs in double precision with partial pivoting, and zero tests use a tolerance of 10⁻⁹. A determinant of 10⁻¹⁷ is reported as zero — by design, not by accident.</li>
+  <li>Symmetric matrices take the Jacobi rotation route to their eigen decomposition; general matrices use the characteristic polynomial (Faddeev–LeVerrier) and a root iteration (Durand–Kerner). The root iteration converges to machine accuracy for the small matrices a course uses, but it is a numerical method, not an exact one.</li>
+  <li>QR and the SVD verify their own reconstruction (‖A − QR‖², ‖A − UΣVᵀ‖²) and report the measured residual, so a factorisation that did not land is visible rather than silently accepted.</li>
+</ul>
+<p><strong>Verify important results independently.</strong> LinearAlgebraViz is provided as an educational aid. It is not a certified engineering, financial, medical or safety-critical calculation tool, and it must not be relied upon as one.</p>
+
+<h2>5. No warranty</h2>
+<p>LinearAlgebraViz is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and non-infringement. We do not warrant that the app will be uninterrupted, error-free, or that any result it produces is correct for your purposes.</p>
+
+<h2>6. Limitation of liability</h2>
+<p>To the maximum extent permitted by applicable law, we shall not be liable for any indirect, incidental, special, consequential or punitive damages, or for any loss of data, grades, marks, profits or goodwill, arising out of or relating to your use of the app. Nothing in these terms excludes or limits liability that cannot lawfully be excluded or limited, including liability for death or personal injury caused by negligence, or for fraud.</p>
+
+<h2>7. Your content</h2>
+<p>Your vectors, matrices, scenes and saved work belong to you. We claim no rights over them, and because they never leave your device we could not exercise any if we did.</p>
+
+<h2>8. Changes to the app and to these terms</h2>
+<p>We may update LinearAlgebraViz and these terms. Updated terms will be posted at this address with a new "last updated" date. Continuing to use the app after an update constitutes acceptance of the revised terms.</p>
+
+<h2>9. Termination</h2>
+<p>These terms remain in effect until terminated. They terminate automatically if you fail to comply with them. On termination you must stop using the app and delete it.</p>
+
+<h2>10. Governing law</h2>
+<p>These terms are governed by the laws of the jurisdiction in which the publisher resides, without regard to conflict-of-law principles. Nothing in this clause deprives you of the protection of mandatory consumer law in your country of residence.</p>
+
+<h2>11. Contact</h2>
+<p>Questions about these terms: <a href="support.html">open a support request</a>.</p>
+
+<footer>© <span id="y">2026</span> Daibou007 Team. LinearAlgebraViz is an independent educational tool and is not affiliated with Apple Inc.</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LinearAlgebraViz — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; max-width: 46rem; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1D1D1F; background: #FFFFFF;
+  }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .6rem; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .35rem; }
+  .lede { color: #6E6E73; margin: 0 0 2rem; }
+  .meta { color: #8A909C; font-size: .875rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .35rem 0; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: .92em; background: rgba(37,115,232,.1);
+    padding: .1em .35em; border-radius: 4px;
+  }
+  .callout {
+    background: #EDF4FF; border-left: 3px solid #2573E8;
+    padding: .9rem 1.1rem; border-radius: 8px; margin: 1.5rem 0;
+  }
+  .qa { border-top: 1px solid rgba(128,140,160,.25); padding-top: 1.1rem; }
+  footer { margin-top: 3rem; color: #8A909C; font-size: .875rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #F5F5F7; background: #0F1118; }
+    .lede { color: #86868B; }
+    .meta, footer { color: #6A6F7C; }
+    .callout { background: #1A2740; border-left-color: #3B88F5; }
+    code { background: rgba(59,136,245,.16); }
+    a { color: #7CB6FF; }
+  }
+</style>
+</head>
+<body>
+
+<h1>LinearAlgebraViz Support</h1>
+<p class="lede">Help with the LinearAlgebraViz app. Most questions are answered below; if yours is not, send us a request and we will reply.</p>
+<p class="meta">Last updated: 23 September 2026</p>
+
+<div class="callout">
+  <strong>Contact.</strong> Email <a href="mailto:support@daibou007.com">support@daibou007.com</a> with your iPad model, your iOS version, and the exact matrix or vectors you were working on. The app's version number is at the bottom of Settings, and in Settings → About.
+</div>
+
+<h2>Common questions</h2>
+
+<div class="qa">
+<h3>How do I enter a matrix?</h3>
+<p>Tap any cell and type a decimal number — whole numbers, negatives and fractions as decimals are all fine (3, -1.25, 0.5). Commit with Return; the page recomputes immediately. The + Row / + Column buttons grow the matrix up to 6×6, and the − buttons shrink it. Readouts honour the precision you set in Settings → Calculation; the engine always computes at full precision and the setting only changes what is printed.</p>
+</div>
+
+<div class="qa">
+<h3>Why does the app say A⁻¹ does not exist?</h3>
+<p>Because the matrix is singular: during elimination a row ran out of pivots, which means det(A) = 0 and no inverse exists. This is stated as a result, not an error — the Matrix page names which row failed. Change one entry so the rows become independent and the inverse will appear; the Invertible Matrix Theorem entry in the Theorem Library loads a worked example of each side of this.</p>
+</div>
+
+<div class="qa">
+<h3>Why do some eigenvalues show as "a ± bi" instead of a direction on the canvas?</h3>
+<p>Those are complex eigenvalues, and a real 2×2 matrix has them exactly when its transformation rotates the plane — a pure rotation, for example, has eigenvalues ±i and no real eigenvector. Since no direction stays fixed, there is nothing to draw; the values are listed instead. A matrix whose eigenvalues are all real draws every eigenvector as a dashed purple line that holds its direction through the whole animation.</p>
+</div>
+
+<div class="qa">
+<h3>Why is det(A) shown as 0 when I entered something that tiny?</h3>
+<p>The engine works in double precision and treats anything below 10⁻⁹ as zero — the tolerance a numerical linear algebra course uses. A determinant of 10⁻¹⁷ rounds to exactly zero, which is the honest reading: at that scale it is indistinguishable from a singular matrix. The tolerance is fixed so that identical input always produces identical output.</p>
+</div>
+
+<div class="qa">
+<h3>How do I move a vector?</h3>
+<p>Drag its arrowhead on the Vector Space canvas. Coordinates snap to the quarter-unit lattice so you can place a vector exactly on a grid line, and the algebra panel updates while you drag. Tap a vector once to make it one of the two the operations panel works on.</p>
+</div>
+
+<div class="qa">
+<h3>What does "infinitely many solutions" mean on the system page?</h3>
+<p>That rank(A) equals rank([A|b]) but is smaller than the number of unknowns, so at least one variable is free. The verdict card names how many free variables there are, gives one particular solution, and lists the null-space directions the solution line extends along — the full set is x = xₚ + t·v. The canvas draws the solution line for 2-unknown systems.</p>
+</div>
+
+<div class="qa">
+<h3>How do I replay the welcome guide or a page tutorial?</h3>
+<p>Settings → Guides &amp; Help. Every guided tour in the app is listed there — the welcome guide, the hub walkthrough, and one coach-mark tutorial for each module page — and can be replayed at any time. Skipping a tour is never the last chance to see it.</p>
+</div>
+
+<div class="qa">
+<h3>Where are my saved scenes, and can I get one back after deleting it?</h3>
+<p>Saved scenes collect on the hub page and live as <code>.lmscene</code> files in the app's Documents folder on this device. Deletions are permanent — which is why every delete, including "Delete All Scenes" in Settings, asks for confirmation first and names what is about to go. If you have an iCloud or Finder backup from before the deletion, restoring it will bring the scenes back. Scenes you export through the share sheet are safe wherever you sent them.</p>
+</div>
+
+<div class="qa">
+<h3>Does LinearAlgebraViz work offline?</h3>
+<p>Yes, entirely. The app performs no network requests at all — every determinant, elimination step, eigenpair and decomposition is computed on your device. There are no cloud features, no optional connections and no exceptions.</p>
+</div>
+
+<div class="qa">
+<h3>Is there a subscription or an in-app purchase?</h3>
+<p>No. LinearAlgebraViz is a one-time purchase. There is no account, no sign-in, no subscription and nothing to buy inside the app.</p>
+</div>
+
+<h2>Reporting a problem</h2>
+<p>To help us fix something quickly, include:</p>
+<ul>
+  <li>your iPad model and iOS version;</li>
+  <li>the LinearAlgebraViz version, from Settings → About;</li>
+  <li>the exact matrix or vectors you entered, copied rather than retyped;</li>
+  <li>what you expected and what happened instead;</li>
+  <li>a screenshot, if the problem is visual.</li>
+</ul>
+
+<h2>Feature requests</h2>
+<p>We are interested in what would make LinearAlgebraViz more useful for AP Precalculus and first-year university linear algebra courses. Send requests to the address above.</p>
+
+<footer>© <span id="y">2026</span> Daibou007 Team. LinearAlgebraViz is an independent educational tool and is not affiliated with Apple Inc.</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
