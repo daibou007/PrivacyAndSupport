@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GraphDeck — Terms of Service</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; max-width: 46rem; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #12141F; background: #F5F6FB;
+  }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .6rem; }
+  .lede { color: #4A5068; margin: 0 0 2rem; }
+  .meta { color: #8A91A6; font-size: .875rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .35rem 0; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .callout {
+    background: #EDF0FE; border-left: 3px solid #4C6EF5;
+    padding: .9rem 1.1rem; border-radius: 8px; margin: 1.5rem 0;
+  }
+  footer { margin-top: 3rem; color: #8A91A6; font-size: .875rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #F2F4FA; background: #0C0F1A; }
+    .lede { color: #B0B8CC; }
+    .meta, footer { color: #6E7891; }
+    .callout { background: #161B2D; border-left-color: #5C7BFA; }
+    a { color: #8FA3F9; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Terms of Service — GraphDeck</h1>
+<p class="lede">These terms govern your use of the GraphDeck application. By using the app you agree to them.</p>
+<p class="meta">Last updated: 23 September 2026</p>
+
+<div class="callout">
+  <strong>The short version.</strong> GraphDeck is a one-time-purchase study tool. It works offline, keeps your data on your device, and never charges you again. Use it honestly for learning and teaching; don't rely on it as a sole authority for graded work; and don't redistribute the app itself.
+</div>
+
+<h2>1. Licence</h2>
+<p>GraphDeck is purchased once through the App Store with no subscription and no in-app purchase. Your purchase is a licence, not a transfer of ownership. You may install and use the app on Apple devices you own or control, as allowed by the Apple Media Services terms that govern App Store purchases.</p>
+
+<h2>2. Permitted use</h2>
+<p>You may use GraphDeck for learning, teaching, and personal study of discrete mathematics. You may not:</p>
+<ul>
+  <li>redistribute, resell, or sublicense the app itself;</li>
+  <li>reverse-engineer it beyond what applicable law expressly allows;</li>
+  <li>present the app's output as your own work where that would breach an academic-integrity rule that binds you.</li>
+</ul>
+
+<h2>3. Educational use and academic integrity</h2>
+<p>GraphDeck is a study aid and demonstration tool. It is not a homework service: the step narrations explain what an algorithm did so you can follow the reasoning, and the responsibility for understanding — and for honest coursework — stays with you. Follow your institution's rules on tools and attribution.</p>
+
+<h2>4. Accuracy and limitations</h2>
+<p>The app implements the standard versions of the algorithms it names, and it tells you its limits rather than guessing past them:</p>
+<ul>
+  <li>greedy colouring returns an <em>upper bound</em> on the chromatic number, not χ itself;</li>
+  <li>Dijkstra requires non-negative weights, and the app refuses to run otherwise;</li>
+  <li>the Hamiltonian search is exhaustive and capped at 12 vertices;</li>
+  <li>the minimum spanning trees require an undirected, connected graph.</li>
+</ul>
+<p>A failed run is a stated precondition, never a silent wrong answer. The step narrations are teaching text, not formal proofs for every possible input.</p>
+
+<h2>5. The optional AI feature</h2>
+<p>The AI Graph Builder uses a language model that you configure with your own API key. It translates an English description into graph structure only. Models misread descriptions: always check the preview against what you asked for. The model never executes an algorithm, and the app validates every returned structure locally before use. Your use of a third-party model provider is additionally governed by that provider's own terms.</p>
+
+<h2>6. No warranty</h2>
+<p>The app is provided "as is" without warranties of any kind, express or implied, including fitness for a particular purpose. It does not warrant that its output is error-free for every input, that it is uninterrupted, or that it is fit for high-stakes use.</p>
+
+<h2>7. Limitation of liability</h2>
+<p>To the maximum extent permitted by law, Daibou007 Team is not liable for any indirect, incidental, special, consequential or punitive damages, or for any loss of data, grades, or academic standing arising from use of the app. Where liability cannot be excluded, it is limited to the amount you paid for the app.</p>
+
+<h2>8. Your content</h2>
+<p>The graphs you draw are yours. They are stored only on your device, in the app's sandbox, with no cloud copy. Deleting the app deletes them; deleting an item inside the app is permanent — which is why every deletion in GraphDeck asks for confirmation first and names what is about to go.</p>
+
+<h2>9. Changes to the app and to these terms</h2>
+<p>We may update the app and these terms. Updated terms are published at this address; continued use after a change means you accept the updated terms. The version history of the app is recorded in its App Store release notes.</p>
+
+<h2>10. Termination</h2>
+<p>These terms end automatically if you delete the app or breach them. Sections that should survive termination — notably the warranty disclaimer and limitation of liability — do.</p>
+
+<h2>11. Governing law</h2>
+<p>These terms are governed by the laws of the People's Republic of China, without regard to conflict-of-law rules, except where the consumer law of your country of residence grants you mandatory protections that cannot be waived.</p>
+
+<h2>12. Contact</h2>
+<p>Questions about these terms: <a href="support.html">open a support request</a>.</p>
+
+<footer>© <span id="y">2026</span> Daibou007 Team. GraphDeck is an independent educational tool and is not affiliated with Apple Inc.</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

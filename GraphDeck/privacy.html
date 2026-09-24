@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GraphDeck — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; max-width: 46rem; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #12141F; background: #F5F6FB;
+  }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .6rem; }
+  .lede { color: #4A5068; margin: 0 0 2rem; }
+  .meta { color: #8A91A6; font-size: .875rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .35rem 0; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .callout {
+    background: #EDF0FE; border-left: 3px solid #4C6EF5;
+    padding: .9rem 1.1rem; border-radius: 8px; margin: 1.5rem 0;
+  }
+  footer { margin-top: 3rem; color: #8A91A6; font-size: .875rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #F2F4FA; background: #0C0F1A; }
+    .lede { color: #B0B8CC; }
+    .meta, footer { color: #6E7891; }
+    .callout { background: #161B2D; border-left-color: #5C7BFA; }
+    a { color: #8FA3F9; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy — GraphDeck</h1>
+<p class="lede">GraphDeck is an offline discrete-mathematics graph workbench for iPad. It has no account, no advertising and no analytics, and it does not collect personal data.</p>
+<p class="meta">Last updated: 23 September 2026</p>
+
+<div class="callout">
+  <strong>The short version.</strong> Everything GraphDeck computes is computed on your device. Your graphs, algorithm runs and settings never leave it. The only network feature is the optional AI Graph Builder — off by default — which sends the one description you type to an endpoint you configure with your own API key. Nothing reaches us, because nothing in the app transmits to us.
+</div>
+
+<h2>1. Who we are</h2>
+<p>GraphDeck is published by Daibou007 Team ("we", "us"). This policy explains what happens to information when you use the app. It applies to the GraphDeck application and nothing else.</p>
+
+<h2>2. Information we collect</h2>
+<p><strong>We collect no personal information.</strong> Specifically, GraphDeck does not:</p>
+<ul>
+  <li>create or require an account, a sign-in, or a profile;</li>
+  <li>collect your name, email address, phone number, or contacts;</li>
+  <li>collect location data of any kind;</li>
+  <li>collect device identifiers, advertising identifiers, or usage analytics;</li>
+  <li>contain advertising, marketing pop-ups, or third-party tracking SDKs;</li>
+  <li>use cookies or any equivalent tracking technology.</li>
+</ul>
+
+<h2>3. Information stored on your device</h2>
+<p>GraphDeck saves your work locally so the app is useful between sessions. This data stays in the app's own sandbox on your device and is never uploaded:</p>
+<ul>
+  <li>the graphs you draw — vertices, edges, weights, direction, layout;</li>
+  <li>the algorithm runs you execute (a capped history you can clear in Settings);</li>
+  <li>your preferences: theme (Light/Dark), canvas defaults, playback speed;</li>
+  <li>images you export, until you delete them or the app.</li>
+</ul>
+<p>Deleting the app removes all of it. There is no cloud copy, because there is no server.</p>
+
+<h2>4. The optional AI Graph Builder</h2>
+<p>The AI Graph Builder is <strong>off by default</strong> and entirely optional. When you enable it, you supply your own API key for a language-model provider, stored in the device Keychain. When you use the feature, the app sends exactly one thing: the English description you typed, to the endpoint you configured.</p>
+<p>It never sends your graphs, your library, your history, or your settings. The model's reply is a small JSON structure that the app validates locally before anything loads; the model never runs an algorithm, and no result anywhere in the app is computed by AI. With the feature off — the default — the app performs no network requests at all.</p>
+
+<h2>5. Required-reason APIs</h2>
+<p>Apple asks apps to declare why they touch certain system APIs. GraphDeck's privacy manifest declares:</p>
+<ul>
+  <li><code>UserDefaults</code> (CA92.1) — stores only the app's own settings and first-run flags;</li>
+  <li>file timestamps (C617.1) — read for the app's own documents inside its container;</li>
+  <li>disk space (E174.1) — checked before writing an exported image.</li>
+</ul>
+
+<h2>6. Children</h2>
+<p>GraphDeck is an educational tool suitable for students. Because it collects nothing at all, it collects nothing from children either. There is no age gate because there is nothing to gate.</p>
+
+<h2>7. Third parties</h2>
+<p>GraphDeck is built with Apple system frameworks and the publisher's own shared component libraries. No third-party analytics, crash-reporting, advertising or tracking SDK is linked.</p>
+
+<h2>8. Changes to this policy</h2>
+<p>If the policy changes, the updated version is published at this address, and the app's Settings page always links to the current text. A material change to data handling would ship in the same release that introduces it.</p>
+
+<h2>9. Contact</h2>
+<p>Questions about privacy: <a href="support.html">open a support request</a>.</p>
+
+<footer>© <span id="y">2026</span> Daibou007 Team. GraphDeck is an independent educational tool and is not affiliated with Apple Inc.</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

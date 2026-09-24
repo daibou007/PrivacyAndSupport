@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GraphDeck — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; max-width: 46rem; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #12141F; background: #F5F6FB;
+  }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .6rem; }
+  h3 { font-size: 1rem; margin: 0 0 .35rem; }
+  .lede { color: #4A5068; margin: 0 0 2rem; }
+  .meta { color: #8A91A6; font-size: .875rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .35rem 0; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .callout {
+    background: #EDF0FE; border-left: 3px solid #4C6EF5;
+    padding: .9rem 1.1rem; border-radius: 8px; margin: 1.5rem 0;
+  }
+  .qa { border-top: 1px solid rgba(128,140,160,.25); padding-top: 1.1rem; margin-top: 1.1rem; }
+  footer { margin-top: 3rem; color: #8A91A6; font-size: .875rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #F2F4FA; background: #0C0F1A; }
+    .lede { color: #B0B8CC; }
+    .meta, footer { color: #6E7891; }
+    .callout { background: #161B2D; border-left-color: #5C7BFA; }
+    .qa { border-top-color: rgba(128,140,160,.35); }
+    a { color: #8FA3F9; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Support — GraphDeck</h1>
+<p class="lede">Answers to the questions GraphDeck users actually ask. If yours is not here, write to us — real mail from a real graph is answered.</p>
+<p class="meta">Last updated: 23 September 2026</p>
+
+<div class="callout">
+  <strong>Contact.</strong> Email <a href="mailto:support@daibou007.com">support@daibou007.com</a> with your iPad model, your iPadOS version, and what you were doing when the trouble started. A screenshot of the canvas and the algorithm's step log helps enormously. The app's version number is in Settings → About GraphDeck.
+</div>
+
+<h2>Common questions</h2>
+
+<div class="qa">
+<h3>How do I connect two vertices with an edge?</h3>
+<p>Tap the <strong>Edge</strong> tool in the left rail, tap the first vertex, then tap the second. A dashed guide line follows your first tap while the tool waits for the second. Self-loops and parallel edges are refused with a message — GraphDeck models simple graphs, which is also what the course's theorems assume.</p>
+</div>
+
+<div class="qa">
+<h3>Why won't the algorithm run? It just shows a red note.</h3>
+<p>That note is a precondition verdict, not a crash. The most common causes: Dijkstra meeting a negative weight (fix the weight in the inspector), Prim or Kruskal on a directed or disconnected graph (toggle <strong>Directed</strong> off, or connect the islands), Tarjan on an undirected graph, or the Hamiltonian search on more than 12 vertices. The engine refuses to guess rather than return a wrong answer.</p>
+</div>
+
+<div class="qa">
+<h3>My textbook colours this graph with fewer colours. Is GraphDeck wrong?</h3>
+<p>Probably not. Greedy colouring (Welsh–Powell order) returns an <em>upper bound</em> on the chromatic number χ, and the vertex order decides how many colours it spends. If χ = 3 is known for the Petersen graph and the greedy pass uses 3, they agree; on other graphs the pass can legally spend more. The run summary says exactly this.</p>
+</div>
+
+<div class="qa">
+<h3>The Hamiltonian search refused my 14-vertex graph.</h3>
+<p>By design. Hamiltonicity is NP-complete; the app runs an exhaustive search and caps it at 12 vertices so an answer always arrives while a lecture is still in the room. Beyond the cap it states the limit instead of pretending.</p>
+</div>
+
+<div class="qa">
+<h3>Where are my graphs saved? Is there a cloud?</h3>
+<p>On the device, in the app's own storage, and that is the whole story: no account, no server, no sync. Every edit autosaves within about a second. Deleting the app deletes the graphs, so export anything you care about (canvas toolbar → <strong>Export</strong> writes a PNG to the share sheet) before removing the app.</p>
+</div>
+
+<div class="qa">
+<h3>Can I type a graph instead of drawing it?</h3>
+<p>Yes — Home → AI Graph Builder, and scroll to the edge-list importer at the bottom. One edge per line: <code>A-B</code>, <code>A-&gt;B</code> (the arrow makes it directed), or <code>A-B:4</code> (a weight). Blank lines and <code>#</code> comments are skipped. This needs no AI key at all.</p>
+</div>
+
+<div class="qa">
+<h3>What does the AI Graph Builder send, and does it cost anything?</h3>
+<p>The feature is off by default. When you enable it you supply your own API key for a model provider, and the app sends only the English description you type, to the endpoint you configured. Your graphs and history never leave the device. Any cost is between you and your provider — GraphDeck itself charges nothing beyond the one-time purchase.</p>
+</div>
+
+<div class="qa">
+<h3>I deleted a vertex/graph. Can I get it back?</h3>
+<p>No — deletions are permanent, which is why every one of them names what is about to go and waits for an explicit confirmation. If you have an iCloud or Finder device backup from before the deletion, restoring that backup brings the app's data back with it.</p>
+</div>
+
+<div class="qa">
+<h3>Does GraphDeck collect any data about me?</h3>
+<p>No. See the <a href="privacy.html">privacy policy</a> — the short version is on the page and the long version is below it. The app performs no network requests at all unless you deliberately switch on the AI builder and use your own key.</p>
+</div>
+
+<footer>© <span id="y">2026</span> Daibou007 Team. GraphDeck is an independent educational tool and is not affiliated with Apple Inc.</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
