@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ComplexEye — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; max-width: 46rem; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #0D121F; background: #F5F7FA;
+  }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .6rem; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .35rem; }
+  .lede { color: #444B5E; margin: 0 0 2rem; }
+  .meta { color: #86909C; font-size: .875rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .35rem 0; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .callout {
+    background: #EEF5FF; border-left: 3px solid #1677FF;
+    padding: .9rem 1.1rem; border-radius: 8px; margin: 1.5rem 0;
+  }
+  footer { margin-top: 3rem; color: #86909C; font-size: .875rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #F2F5FF; background: #070A12; }
+    .lede { color: #B4C2E0; }
+    .meta, footer { color: #717A94; }
+    .callout { background: #10141E; border-left-color: #2986FF; }
+    a { color: #7CB6FF; }
+    code { color: #B4C2E0; }
+  }
+</style>
+</head>
+<body>
+
+<h1>ComplexEye — Support</h1>
+<p class="lede">ComplexEye is an offline complex analysis workbench for iPad. This page answers the questions the app raises most often.</p>
+<p class="meta">Last updated: 29 September 2026</p>
+
+<h2>Contact</h2>
+<p>Email <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a> with the app version (Settings → the footer under Privacy &amp; terms), your iPad model and iPadOS version, and what you did just before the problem. A screenshot helps more than a description.</p>
+
+<h2>Getting started</h2>
+<h3>The app asks me to type a function. What can I type?</h3>
+<p>Any complex function of <code>z</code>. <code>z^2 - 1</code>, <code>1/(z-2)</code>, <code>sqrt(z)</code>, <code>log(z)</code>, <code>exp(i*z)</code>, <code>conj(z)</code>, <code>abs(z)</code> and <code>arg(z)</code> are all valid. The symbol bar above the keyboard inserts the notation the engine implements, which is faster than typing function names by hand. The complete list is in Settings → Guides &amp; help → User Manual → Function Input Rules.</p>
+
+<h3>Why does the preview show something different from what I typed?</h3>
+<p>It should not — the line under the field is rendered from the expression the engine parsed, so it is a reading you can check rather than an echo. If it differs from your intent, the function differs from your intent too. Incorrect input is reported with the character and its position, for example "Unexpected character '$' at position 3".</p>
+
+<h2>The coloured picture</h2>
+<h3>What do the colours mean?</h3>
+<p>Hue is the argument of f(z) and brightness is its modulus. Zeros appear as black points, poles as white ones. The faint dark lines are the π/6 phase grid: they make the argument readable as contours, and the number of colour cycles around a point is the order of the zero or pole there.</p>
+
+<h3>The picture looks like noise near a pole.</h3>
+<p>That is what the function does there: near a pole the phase turns through every value in a very small neighbourhood, so no rendering at any resolution will look smooth. Zoom in and the structure resolves; switch the colour style to Magnitude to see the pole as a bright point without the phase.</p>
+
+<h3>Is it drawn on the GPU?</h3>
+<p>Yes. The field is computed per pixel by a Metal shader compiled from your function at run time. If that compilation fails on a particular function, the app falls back to a CPU renderer at a lower resolution and says so — the picture keeps the same meaning, it is only slower.</p>
+
+<h2>Singularities</h2>
+<h3>Why does the app say "Nothing located in this window"?</h3>
+<p>Because the search only looks inside the visible region. Widen the half-width, or move the centre, and search again. A function such as <code>1/(z^2+1)</code> has no singularity on the real axis at all — its poles are at ±i.</p>
+
+<h3>What does "Candidate" mean?</h3>
+<p>The search found something worth investigating but could not measure it stably enough to name a type. This happens near a branch cut, or where two singularities are close together. Zooming in usually resolves it; the app would rather say "candidate" than give a confident wrong classification.</p>
+
+<h3>How is the order of a pole decided?</h3>
+<p>By measurement, not by reading the formula: |f| is sampled on five shrinking circles around the point, and the order is the slope of log|f| against log ε. You can see the measurement printed under each entry.</p>
+
+<h2>Riemann surfaces</h2>
+<h3>Which functions have a branch-sheet surface?</h3>
+<p>Any with a root or a logarithm in them. The sheet count comes from the function's structure — a square root closes after two turns, a cube root after three — and the logarithm never closes, so the number of turns drawn is yours to choose.</p>
+
+<h3>The surface has holes in it.</h3>
+<p>Deliberate. Where the function is undefined, or its modulus runs past the scale the surface is drawn at, no geometry is emitted. Joining across a pole would draw a surface that does not exist.</p>
+
+<h2>Exporting</h2>
+<h3>Where do exported files go?</h3>
+<p>Into the system share sheet: save to Files, send by Mail or Messages, or open in another app. The app writes to a temporary directory and keeps no second copy, so what you save is what you chose to save.</p>
+
+<h3>The 3D export does not include the interface.</h3>
+<p>Correct — the export re-renders the surface with the same shader and camera at a higher resolution, so a figure carries the geometry and not the controls around it.</p>
+
+<h2>Privacy</h2>
+<h3>Does the app send anything anywhere?</h3>
+<p>No, unless you enable the optional problem reader and enter your own API key. ComplexEye has no account, no analytics, no advertising and no third-party SDKs. The <a href="privacy.html">privacy policy</a> has the detail.</p>
+
+<h3>What happens to my saved functions if I delete the app?</h3>
+<p>They are deleted with it. Everything is stored in the app's own container on your iPad, and there is no copy anywhere else.</p>
+
+<h2>Troubleshooting</h2>
+<h3>The app is slow on a large window with a complicated function.</h3>
+<p>Lower the surface resolution, reduce the number of turns drawn on a branch-sheet surface, or narrow the window. The field itself is GPU-bound and scales with the canvas, not with the function.</p>
+
+<h3>A tutorial keeps appearing.</h3>
+<p>It should appear once per screen, and can be turned off by finishing or skipping it. Replay any of them from Settings → Guides &amp; help, and replay the welcome guide from the same place.</p>
+
+<h3>I found a mathematical error.</h3>
+<p>Please send it — with the function, the window, and what you expected. Mathematical accuracy is the point of the app, and reports of wrong results are the most useful mail we get.</p>
+
+<footer>ComplexEye · Copyright © 2026 Daibou007 Team. All rights reserved.<br>Studio: Daibou007 Team</footer>
+</body>
+</html>

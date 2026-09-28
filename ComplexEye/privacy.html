@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ComplexEye — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; max-width: 46rem; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #0D121F; background: #F5F7FA;
+  }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .6rem; }
+  .lede { color: #444B5E; margin: 0 0 2rem; }
+  .meta { color: #86909C; font-size: .875rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .35rem 0; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .callout {
+    background: #EEF5FF; border-left: 3px solid #1677FF;
+    padding: .9rem 1.1rem; border-radius: 8px; margin: 1.5rem 0;
+  }
+  footer { margin-top: 3rem; color: #86909C; font-size: .875rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #F2F5FF; background: #070A12; }
+    .lede { color: #B4C2E0; }
+    .meta, footer { color: #717A94; }
+    .callout { background: #10141E; border-left-color: #2986FF; }
+    a { color: #7CB6FF; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy — ComplexEye</h1>
+<p class="lede">ComplexEye is an offline complex analysis tool for iPad. It has no account, no advertising and no analytics, and it does not collect personal data.</p>
+<p class="meta">Last updated: 29 September 2026</p>
+
+<div class="callout">
+  <strong>The short version.</strong> Everything ComplexEye computes is computed on your iPad. Nothing about you or your work is transmitted to us, because there is nothing in the app that transmits it. The only network feature is optional, off by default, and sends problem text you type to an endpoint you configure with your own API key.
+</div>
+
+<h2>1. Who we are</h2>
+<p>ComplexEye is published by Daibou007 Team ("we", "us"). This policy explains what happens to information when you use the app. It applies to the ComplexEye application and nothing else.</p>
+
+<h2>2. Information we collect</h2>
+<p><strong>We collect no personal information.</strong> Specifically, ComplexEye does not:</p>
+<ul>
+  <li>create or require an account, a sign-in, or a profile;</li>
+  <li>collect your name, email address, phone number, or contacts;</li>
+  <li>collect location data of any kind;</li>
+  <li>collect device identifiers, advertising identifiers, or usage analytics;</li>
+  <li>contain advertising, marketing pop-ups, or third-party tracking SDKs;</li>
+  <li>use cookies or any equivalent tracking technology.</li>
+</ul>
+
+<h2>3. Information stored on your iPad</h2>
+<p>ComplexEye saves your work locally so the app is useful between sessions. This data stays in the app's own storage on your device and is never uploaded:</p>
+<ul>
+  <li>the functions you have worked with, with the module they came from and whether you starred them;</li>
+  <li>your display settings — appearance, colour style, brightness, grid spacing, surface resolution, precision, and the iteration limit;</li>
+  <li>which guided tours you have already seen, so they are not shown again;</li>
+  <li>if you use the optional problem reader, the problems you have submitted and the functions extracted from them.</li>
+</ul>
+<p>Deleting the app deletes all of it. There is no copy anywhere else, and no backup is made by us.</p>
+
+<h2>4. The optional problem reader</h2>
+<p>The problem reader is off by default. When you enable it and supply your own API key, the text of a problem you submit is sent to the service endpoint you configured — for example OpenAI, Anthropic or Gemini — so that a model can convert it into a function of <code>z</code>. That request is subject to the privacy policy of whichever provider you chose. We do not operate, proxy or log that traffic; the request goes from your iPad to the endpoint you named.</p>
+<p>Nothing else in the app sends anything. Without a stored API key the feature cannot run at all: every request path in the app refuses before any network call is made, rather than merely hiding the controls.</p>
+
+<h2>5. Data we never see</h2>
+<ul>
+  <li>the functions you type, and the results computed from them;</li>
+  <li>your exported images and PDF reports, which are written to files you control;</li>
+  <li>your API key, which is stored in the iOS Keychain on your device and never leaves it except in a request to the endpoint you configured.</li>
+</ul>
+
+<h2>6. Children's privacy</h2>
+<p>ComplexEye collects no personal information from anyone, including children under 13. There is no account, no messaging and no user-generated content that leaves the device.</p>
+
+<h2>7. Your choices</h2>
+<ul>
+  <li>Leave the problem reader disabled — every other feature works fully without it.</li>
+  <li>Remove your stored API key at any time in Settings, which disables the feature immediately.</li>
+  <li>Clear your saved functions and starred records in Settings, or delete the app to remove everything at once.</li>
+</ul>
+
+<h2>8. Educational scope</h2>
+<p>ComplexEye is a teaching and exploration tool for complex analysis. It is not a certified engineering, scientific or safety-critical instrument, and results should be verified against your course material before submitted work relies on them.</p>
+
+<h2>9. Changes to this policy</h2>
+<p>If this policy changes, the revised version will be published at this address with a new date. Material changes will also be noted in the app's App Store release notes.</p>
+
+<h2>10. Contact</h2>
+<p>Questions about this policy, or about anything in the app, can be sent to <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a>.</p>
+
+<footer>ComplexEye · Copyright © 2026 Daibou007 Team. All rights reserved.<br>Studio: Daibou007 Team</footer>
+</body>
+</html>
