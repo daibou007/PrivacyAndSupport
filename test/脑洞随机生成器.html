@@ -187,6 +187,17 @@
     from { transform: scale(.55) rotate(var(--rot, 0deg)); opacity: 0; }
     to   { transform: scale(1) rotate(var(--rot, 0deg)); opacity: 1; }
   }
+  /* 弹窗随机入场方式（:not(.closing) 保证关闭动画优先） */
+  .popup.spawn-left:not(.closing)  { animation-name: flyInL; animation-duration: .3s; }
+  .popup.spawn-right:not(.closing) { animation-name: flyInR; animation-duration: .3s; }
+  .popup.spawn-top:not(.closing)   { animation-name: flyInT; animation-duration: .32s; }
+  .popup.spawn-bottom:not(.closing){ animation-name: flyInB; animation-duration: .32s; }
+  .popup.spawn-spin:not(.closing)  { animation-name: popSpin; animation-duration: .38s; }
+  @keyframes flyInL { from { transform: translateX(-60vw) rotate(-14deg); opacity: 0; } to { transform: translateX(0) rotate(var(--rot, 0deg)); opacity: 1; } }
+  @keyframes flyInR { from { transform: translateX(60vw) rotate(14deg); opacity: 0; } to { transform: translateX(0) rotate(var(--rot, 0deg)); opacity: 1; } }
+  @keyframes flyInT { from { transform: translateY(-70vh) scale(.8); opacity: 0; } to { transform: translateY(0) rotate(var(--rot, 0deg)) scale(1); opacity: 1; } }
+  @keyframes flyInB { from { transform: translateY(70vh) scale(.8); opacity: 0; } to { transform: translateY(0) rotate(var(--rot, 0deg)) scale(1); opacity: 1; } }
+  @keyframes popSpin { from { transform: scale(.3) rotate(330deg); opacity: 0; } to { transform: scale(1) rotate(var(--rot, 0deg)); opacity: 1; } }
   .popup.closing {
     animation: popOut .16s ease-in both;
   }
@@ -549,6 +560,43 @@
   .impact-card .verdict { font-weight: 800; margin-bottom: 4px; color: #fff; }
   .impact-card .line b { color: var(--accent2); }
 
+  /* ============ 狂点彩蛋 ============ */
+  .egg-fx { position: fixed; pointer-events: none; }
+  .egg-emoji { z-index: 99970; font-size: 18px; }
+  .egg-text {
+    z-index: 99970; font-size: 13px; font-weight: 700; white-space: nowrap;
+    color: var(--accent2); text-shadow: 0 2px 8px rgba(0,0,0,.65);
+  }
+  .egg-ripple {
+    z-index: 99969; width: 12px; height: 12px; border-radius: 50%;
+    border: 2px solid rgba(124,92,255,.9); margin: -6px 0 0 -6px;
+  }
+
+  /* ============ 外星人反击 ============ */
+  .laser {
+    position: fixed; z-index: 99956; pointer-events: none;
+    width: 6px; border-radius: 3px; transform-origin: 50% 0;
+    background: linear-gradient(180deg, #fff, #ff2d55 30%, #ff9f0a);
+    box-shadow: 0 0 16px #ff2d55, 0 0 42px rgba(255,45,85,.55);
+  }
+  .crack-svg { position: fixed; inset: 0; z-index: 99960; pointer-events: none; }
+  .color-flash { position: fixed; inset: 0; z-index: 99965; pointer-events: none; opacity: 0; }
+  #mainUI, .popup, .impact-card { transition: filter .35s ease; }
+  body.grayscale #mainUI, body.grayscale .popup, body.grayscale .impact-card {
+    filter: grayscale(1) brightness(.82) contrast(1.12);
+  }
+  body.quake #mainUI, body.quake .popup { animation: quakeX .55s linear !important; }
+  @keyframes quakeX {
+    0%, 100% { transform: translate(0, 0); }
+    18% { transform: translate(-14px, 7px) rotate(-.6deg); }
+    38% { transform: translate(12px, -9px) rotate(.5deg); }
+    58% { transform: translate(-9px, -5px); }
+    78% { transform: translate(7px, 5px) rotate(.3deg); }
+  }
+  .earth-box { margin-top: 12px; }
+  .earth-box .fill { background: linear-gradient(90deg, #1f9d55, #7ee787); }
+  #earthNote { color: var(--muted); font-size: 12px; margin-left: 8px; }
+
   @media (max-width: 480px) {
     .popup .body { padding: 14px 12px 12px; }
     .logo { font-size: 52px; }
@@ -579,8 +627,13 @@
         <div class="pbar big"><div class="fill charge" id="repelFill"></div></div>
         <div class="repel-num">当前 <b id="repelNum">99.00%</b><span id="repelDiff">距击退还差 1.00%</span></div>
       </div>
+      <div class="repel-box earth-box">
+        <div class="repel-label" style="color:#7ee787">地球完整度（小心外星人反击）</div>
+        <div class="pbar big"><div class="fill" id="earthFill" style="width:100%"></div></div>
+        <div class="repel-num">当前 <b id="earthHpNum" style="color:#7ee787">100%</b><span id="earthNote">地球还很完整</span></div>
+      </div>
       <button class="big-btn" id="attackBtn">🧠 生成脑洞，发起攻击</button>
-      <p class="hint">每次攻击需要一枚新脑洞 · 弹窗审核流程不可避免</p>
+      <p class="hint">每次攻击需要一枚新脑洞 · 戳 🛸 会挨打 · 满屏狂点有惊喜</p>
     </section>
 
     <section id="history" hidden>
@@ -772,6 +825,106 @@
     e.addEventListener("animationend", function () { e.remove(); });
   }
 
+  /* ---------------- 狂点彩蛋系统：所有图层皆可点，随机触发各种效果 ---------------- */
+  var EGG_TEXTS = [
+    "别点了，按钮都社恐了", "你发现了空气彩蛋", "这一击造成了 0 点伤害",
+    "手指热身中…", "外星人说它也想要一个", "点击已记录，年终评奖",
+    "这里什么都没有，骗你的", "狂点成就 +1", "地球防卫军为你点赞",
+    "再点 100 次解锁虚无", "这颗星星被你点醒了", "召唤失败：脑洞余额不足",
+    "您已触发：啥也没发生", "停！这里是宇宙安全区", "点我干啥，去打外星人"
+  ];
+  var EGG_EMOJIS = ["🧠", "✨", "💥", "👾", "🛸", "🌚", "🍉", "🐸", "🎈", "🦄", "🍕", "⭐"];
+  var eggClicks = 0;
+
+  function eggCap() {
+    var all = document.querySelectorAll(".egg-fx");
+    if (all.length > 40) all[0].remove();
+  }
+  function eggFloatText(x, y, text) {
+    eggCap();
+    var el = document.createElement("div");
+    el.className = "egg-fx egg-text";
+    el.textContent = text;
+    el.style.left = Math.min(window.innerWidth - 170, Math.max(8, x - 60)) + "px";
+    el.style.top = Math.max(8, y - 24) + "px";
+    document.body.appendChild(el);
+    var a = el.animate([
+      { transform: "translateY(0) scale(.7)", opacity: 0 },
+      { transform: "translateY(-16px) scale(1)", opacity: 1, offset: .2 },
+      { transform: "translateY(-52px) scale(1)", opacity: 0 }
+    ], { duration: 1400, easing: "ease-out" });
+    a.onfinish = function () { el.remove(); };
+  }
+  function eggRipple(x, y) {
+    eggCap();
+    var el = document.createElement("div");
+    el.className = "egg-fx egg-ripple";
+    el.style.left = x + "px";
+    el.style.top = y + "px";
+    document.body.appendChild(el);
+    var a = el.animate([
+      { transform: "scale(.4)", opacity: 1 },
+      { transform: "scale(4.2)", opacity: 0 }
+    ], { duration: 600, easing: "cubic-bezier(.2,.7,.4,1)" });
+    a.onfinish = function () { el.remove(); };
+  }
+  function eggEmojiBurst(x, y) {
+    for (var i = 0; i < 6; i++) {
+      (function (n) {
+        eggCap();
+        var el = document.createElement("div");
+        el.className = "egg-fx egg-emoji";
+        el.textContent = pick(EGG_EMOJIS);
+        el.style.left = x + "px";
+        el.style.top = y + "px";
+        document.body.appendChild(el);
+        var ang = Math.random() * Math.PI * 2;
+        var dist = randInt(36, 120);
+        var a = el.animate([
+          { transform: "translate(-50%,-50%) scale(.5) rotate(0deg)", opacity: 1 },
+          { transform: "translate(calc(-50% + " + (Math.cos(ang) * dist).toFixed(0) + "px), calc(-50% + " + (Math.sin(ang) * dist).toFixed(0) + "px)) scale(1.3) rotate(" + randInt(-240, 240) + "deg)", opacity: 0 }
+        ], { duration: randInt(500, 900), delay: n * 30, easing: "cubic-bezier(.2,.7,.4,1)", fill: "backwards" });
+        a.onfinish = function () { el.remove(); };
+      })(i);
+    }
+  }
+  function eggSpinPopup() {
+    var pops = Array.prototype.slice.call(document.querySelectorAll(".popup:not(.stale):not(.closing)"));
+    if (!pops.length) return false;
+    var p = pick(pops);
+    p.animate([
+      { transform: "rotate(" + getComputedStyle(p).getPropertyValue("--rot") + ")" },
+      { transform: "rotate(360deg)", offset: .7 },
+      { transform: "rotate(" + getComputedStyle(p).getPropertyValue("--rot") + ")" }
+    ], { duration: 650, easing: "cubic-bezier(.34,1.3,.64,1)" });
+    return true;
+  }
+  function easterEgg(x, y) {
+    eggClicks++;
+    var roll = Math.random();
+    if (roll < 0.28) { eggEmojiBurst(x, y); }
+    else if (roll < 0.52) { eggFloatText(x, y, pick(EGG_TEXTS)); }
+    else if (roll < 0.66) { eggRipple(x, y); sfx.click(); }
+    else if (roll < 0.78) {
+      document.body.classList.add("shaking");
+      setTimeout(function () { document.body.classList.remove("shaking"); }, 420);
+    }
+    else if (roll < 0.86) { if (!eggSpinPopup()) eggRipple(x, y); }
+    else { eggFloatText(x, y, pick(EGG_TEXTS)); eggEmojiBurst(x, y); }
+
+    if (eggClicks % 50 === 0) toast("🖱️ 已狂点 " + eggClicks + " 次，手指已申请工伤");
+    if (Math.random() < 0.025) {
+      spawnBackdropPopup("🥚 彩蛋发现", pick(EGG_TEXTS), "🥚");
+    }
+  }
+  document.addEventListener("click", function (e) {
+    if (e.target.closest(".btn98") || e.target.closest(".x")) {
+      if (Math.random() < 0.3) eggRipple(e.clientX, e.clientY);
+      return; /* 按钮保留本职功能 */
+    }
+    easterEgg(e.clientX, e.clientY);
+  });
+
   /* ---------------- 通用弹窗 ----------------
      opts: { title, icon, text, html, width, buttons:[{label, value, primary, runaway}], onOpen }
      返回 Promise，resolve 为被点击按钮的 value（或 'close'） */
@@ -781,17 +934,21 @@
       updateDepth();
       sfx[opts.sound || "open"]();
 
-      var cascade = openCount - 1;
+      /* 随机位置 + 随机入场动画，不再固定级联堆叠 */
       var w = opts.width || 400;
-      var maxX = Math.max(0, window.innerWidth - w - 16);
-      var x = Math.min(maxX, Math.max(8, window.innerWidth / 2 - w / 2 + (cascade % 7) * 34 - 80));
-      var y = Math.min(window.innerHeight - 200, Math.max(8, window.innerHeight / 2 - 150 + (cascade % 7) * 30 - 70));
+      var maxX = Math.max(8, window.innerWidth - w - 16);
+      var maxY = Math.max(8, window.innerHeight - 280);
+      var x = randInt(8, maxX);
+      var y = randInt(8, maxY);
 
       var el = document.createElement("div");
       el.className = "popup";
+      if (opts.sound !== "warn") {
+        el.classList.add(pick(["spawn-left", "spawn-right", "spawn-top", "spawn-bottom", "spawn-spin"]));
+      }
       el.style.left = x + "px";
       el.style.top = y + "px";
-      el.style.setProperty("--rot", (Math.random() * 2.4 - 1.2).toFixed(2) + "deg");
+      el.style.setProperty("--rot", (Math.random() * 4 - 2).toFixed(2) + "deg");
       if (opts.width) el.style.width = "min(" + opts.width + "px, calc(100vw - 28px))";
 
       var tb = document.createElement("div");
@@ -1200,7 +1357,7 @@
     var maxX = Math.max(8, window.innerWidth - w - 16);
     var maxY = Math.max(8, window.innerHeight - 220);
     var el = document.createElement("div");
-    el.className = "popup stale";
+    el.className = "popup stale " + pick(["spawn-left", "spawn-right", "spawn-top", "spawn-bottom", "spawn-spin"]);
     el.style.left = randInt(8, maxX) + "px";
     el.style.top = randInt(8, maxY) + "px";
     el.style.width = "min(" + w + "px, calc(100vw - 28px))";
@@ -1452,6 +1609,126 @@
     }
   }
 
+  /* ---------------- 外星人反击：激光 + 碎屏 + 黑白 + 红绿黄闪烁 ---------------- */
+  battle.earthHp = 100;
+  var ALIEN_ATTACK_TAUNTS = [
+    "👽：吃我一记星际激光！", "👽：礼尚往来，别客气。",
+    "👽：你们地球的玻璃挺脆啊。", "👽：这叫礼炮，专治各种不服。"
+  ];
+
+  function updateEarthHp() {
+    var hp = Math.max(0, battle.earthHp);
+    $("#earthHpNum").textContent = hp + "%";
+    $("#earthFill").style.width = hp + "%";
+    $("#earthNote").textContent =
+      hp >= 80 ? "地球还很完整" : hp >= 50 ? "地球开始掉渣了" :
+      hp >= 20 ? "地球正在硬撑" : "地球只剩一口气";
+  }
+
+  function colorFlash(color, delay) {
+    setTimeout(function () {
+      var f = document.createElement("div");
+      f.className = "color-flash";
+      f.style.background = color;
+      document.body.appendChild(f);
+      f.animate(
+        [{ opacity: 0 }, { opacity: .5, offset: .18 }, { opacity: 0 }],
+        { duration: 420, easing: "ease-out" }
+      ).onfinish = function () { f.remove(); };
+    }, delay);
+  }
+
+  function spawnCracks(x, y) {
+    var NS = "http://www.w3.org/2000/svg";
+    var svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("class", "crack-svg");
+    svg.style.opacity = "0";
+    for (var i = 0; i < 11; i++) {
+      var ang = (i / 11) * Math.PI * 2 + Math.random() * 0.5;
+      var d = "M" + x + "," + y;
+      var r = 0;
+      for (var s = 0; s < 5; s++) {
+        r += randInt(22, 58);
+        var cx = x + Math.cos(ang) * r + randInt(-15, 15);
+        var cy = y + Math.sin(ang) * r + randInt(-15, 15);
+        d += " L" + cx.toFixed(0) + "," + cy.toFixed(0);
+        ang += (Math.random() - 0.5) * 0.55;
+      }
+      var path = document.createElementNS(NS, "path");
+      path.setAttribute("d", d);
+      path.setAttribute("stroke", "rgba(255,255,255,.85)");
+      path.setAttribute("stroke-width", (Math.random() * 1.6 + 0.8).toFixed(1));
+      path.setAttribute("fill", "none");
+      svg.appendChild(path);
+    }
+    var crater = document.createElementNS(NS, "circle");
+    crater.setAttribute("cx", x); crater.setAttribute("cy", y);
+    crater.setAttribute("r", randInt(10, 18));
+    crater.setAttribute("stroke", "rgba(255,255,255,.9)");
+    crater.setAttribute("stroke-width", "2");
+    crater.setAttribute("fill", "rgba(255,80,60,.18)");
+    svg.appendChild(crater);
+    document.body.appendChild(svg);
+    svg.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 90, fill: "forwards" });
+    setTimeout(function () {
+      svg.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 600, fill: "forwards" })
+        .onfinish = function () { svg.remove(); };
+    }, 2100);
+  }
+
+  function alienAttack() {
+    if (!battle.active || battle.alienFiring) return;
+    battle.alienFiring = true;
+    setTimeout(function () { battle.alienFiring = false; }, 2800);
+
+    var ufoRect = document.querySelector(".ufo").getBoundingClientRect();
+    var fx = ufoRect.left + ufoRect.width / 2;
+    var fy = ufoRect.top + ufoRect.height / 2;
+    var tx = randInt(Math.round(window.innerWidth * 0.15), Math.round(window.innerWidth * 0.85));
+    var ty = randInt(Math.round(window.innerHeight * 0.5), Math.round(window.innerHeight * 0.85));
+
+    eggFloatText(fx, ufoRect.top + 30, "⚠️ 外星人反击！");
+    sfx.warn();
+
+    /* 激光束：从 UFO 射向地面目标点 */
+    var dist = Math.hypot(tx - fx, ty - fy);
+    var ang = Math.atan2(ty - fy, tx - fx) * 180 / Math.PI - 90;
+    var laser = document.createElement("div");
+    laser.className = "laser";
+    laser.style.left = (fx - 3) + "px";
+    laser.style.top = fy + "px";
+    laser.style.height = dist.toFixed(0) + "px";
+    laser.style.transform = "rotate(" + ang.toFixed(1) + "deg)";
+    document.body.appendChild(laser);
+    laser.animate(
+      [{ opacity: 0 }, { opacity: 1, offset: .15 }, { opacity: 1, offset: .75 }, { opacity: 0 }],
+      { duration: 620, easing: "linear", fill: "forwards" }
+    ).onfinish = function () { laser.remove(); };
+
+    /* 命中地面：碎屏 + 地震 + 黑白 + 红绿黄三连闪 + 地球掉血 */
+    setTimeout(function () {
+      spawnCracks(tx, ty);
+      document.body.classList.add("quake");
+      setTimeout(function () { document.body.classList.remove("quake"); }, 600);
+      document.body.classList.add("grayscale");
+      setTimeout(function () { document.body.classList.remove("grayscale"); }, 1500);
+      colorFlash("rgb(255,45,85)", 0);
+      colorFlash("rgb(48,209,88)", 260);
+      colorFlash("rgb(255,214,10)", 520);
+      sfx.boom();
+
+      battle.earthHp -= randInt(4, 11);
+      if (battle.earthHp <= 0) {
+        battle.earthHp = 100;
+        toast("🌍 地球已被脑洞能量原地重启，好险");
+        setTaunt("👽：这球怎么打不死？！");
+      } else {
+        setTaunt(pick(ALIEN_ATTACK_TAUNTS));
+      }
+      updateEarthHp();
+    }, 420);
+  }
+
   function applyHit(idea) {
     battle.hits++;
     var dmg = +(Math.random() * 0.07 + 0.01).toFixed(2);
@@ -1521,7 +1798,11 @@
       buttons: [
         { label: "🔄 再来一个脑洞", value: "again", primary: true },
         { label: "🏳️ 暂时撤退", value: "retreat" }
-      ]
+      ],
+      onOpen: function () {
+        /* 结算时外星人概率反击 */
+        if (Math.random() < 0.45) setTimeout(alienAttack, randInt(600, 1300));
+      }
     });
   }
 
@@ -1627,6 +1908,18 @@
   attackBtn.addEventListener("click", function () {
     if (!running) sfx.click();
     generateAndAttack();
+  });
+
+  /* 戳 UFO：激怒外星人，可能招来反击 */
+  $("#ufoWrap").style.cursor = "pointer";
+  $("#ufoWrap").addEventListener("click", function () {
+    if (!battle.active) return;
+    sfx.deny();
+    setTaunt(pick([
+      "👽：别戳了！再戳开火了！", "👽：你的手往哪戳呢？",
+      "👽：信不信我现在就滋你！", "👽：戳戳戳，幼稚鬼！"
+    ]));
+    if (Math.random() < 0.55) alienAttack();
   });
 })();
 </script>
