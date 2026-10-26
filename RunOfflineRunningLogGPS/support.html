@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RunOffline — Support</title>
+<style>
+  body { font-family: -apple-system, "Helvetica Neue", sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; color: #1c1c1e; line-height: 1.6; }
+  h1 { font-size: 28px; } h2 { font-size: 20px; margin-top: 32px; }
+  .muted { color: #6e6e73; font-size: 14px; }
+  code { background: #f2f2f7; padding: 2px 6px; border-radius: 6px; }
+  .box { background: #f5f5f7; padding: 14px 18px; border-radius: 10px; margin: 16px 0; }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #e5e5ea; color: #6e6e73; font-size: 13px; }
+</style>
+</head>
+<body>
+<h1>RunOffline Support</h1>
+<p class="muted">Last updated: 2026-10-26 · RunOffline: Running Log &amp; GPS · iOS 17+ / watchOS 10+ · no account, no ads, no upload</p>
+
+<h2>Quick start</h2>
+<ol>
+  <li><strong>Allow location.</strong> On first launch, choose <em>While Using the App</em> and keep <em>Precise Location</em> on — without precise location, distance and pace will be noticeably short.</li>
+  <li><strong>Start a run.</strong> Pick a mode (Free / Steady / Intervals) and tap start. The 3-2-1 countdown is optional.</li>
+  <li><strong>Keep the screen off.</strong> Recording continues in the background; the blue location pill confirms it. Distance and pace also appear on the Lock Screen and in the Dynamic Island if the Live Activity is enabled.</li>
+  <li><strong>Finish.</strong> Swipe to stop and save. The summary shows distance, pace, splits, elevation, heart rate and estimated calories.</li>
+  <li><strong>Review and export.</strong> Open the run from History for charts and splits; export CSV, JSON or GPX from Settings → Data.</li>
+</ol>
+
+<h2>Heart rate and alerts</h2>
+<p>Heart rate requires an Apple Watch that is recording the run, plus Health permission. iOS never tells an app whether read access was granted, so if numbers stay empty, check the Health app → Sharing → Apps → RunOffline, and confirm the watch is actually worn and recording.</p>
+<p>The heart-rate limit alert fires only after your heart rate has stayed at or above the limit you set for <strong>60 seconds</strong>, and then goes quiet for 5 minutes before it can fire again — this prevents buzzing on every hard effort. Heart-rate drift (heat stress) compares per-kilometre averages. Both are coaching hints, not medical measurements.</p>
+
+<h2>Apple Watch</h2>
+<p>Install the watch app from the Watch app on your iPhone. Settings configured on the phone (units, heart-rate limit, steady-pace target, interval presets) are pushed to the watch. The watch records independently, so you can leave the phone at home; runs transfer to the phone over WatchConnectivity when the two are near each other again. If a run seems missing on the phone, open the app on both devices and keep them close for a minute.</p>
+
+<h2>Backup and restore</h2>
+<p>Settings → Data offers three ways to get your data out:</p>
+<ul>
+  <li><strong>CSV summary</strong> — one row per run, for spreadsheets.</li>
+  <li><strong>Full backup (JSON)</strong> — everything, restorable inside the app with either <em>Merge</em> or <em>Replace All</em>.</li>
+  <li><strong>GPX</strong> — a single track that imports into Strava, Nike Run Club, adidas Running and other services.</li>
+</ul>
+<p>If you enable iCloud backup, up to 7 rolling snapshots are kept in your own private iCloud. Backups can be passphrase-protected; the passphrase is stored in your Keychain and <strong>cannot be recovered if lost</strong> — write it down somewhere safe.</p>
+
+<h2>Widgets, complications and Live Activity</h2>
+<p>Add the widget from the Home Screen or Lock Screen gallery, or as a complication on your watch face. If the Live Activity is turned off in Settings → Metrics &amp; Display, nothing appears on the Lock Screen or in the Dynamic Island while running. Widgets refresh roughly every 30 minutes and immediately after a run is saved — they are not a live readout during a run.</p>
+
+<h2>Battery</h2>
+<p>Continuous GPS is the main cost — expect roughly the same drain as any GPS running app, typically under 8% per hour on recent iPhones. The energy-saver view (bolt icon) hides the map and lowers rendering cost. Low Power Mode slows location updates; recording continues with slightly lower precision.</p>
+
+<h2>Troubleshooting</h2>
+<ul>
+  <li><strong>Distance is too short or the route jumps</strong> — check that Precise Location is on (iOS Settings → RunOffline → Location). Wait for the GPS to settle for 10–20 seconds before starting, and expect drift in the first few hundred metres in cities or under trees.</li>
+  <li><strong>No cadence shown</strong> — cadence tracking is off, or Motion &amp; Fitness permission was denied. Turn it on in Settings → Metrics &amp; Display, then re-grant in iOS Settings.</li>
+  <li><strong>No reminders</strong> — notifications were denied. Settings → Permissions shows the current status and a shortcut to iOS Settings.</li>
+  <li><strong>The app was force-quit mid-run</strong> — relaunch it; the interrupted recording is offered for recovery.</li>
+  <li><strong>Calories look high or low</strong> — the estimate uses the ACSM running equation with your speed and body weight. Check your weight in Settings → Profile, and note that "Gross" also adds resting metabolism.</li>
+  <li><strong>Music stops during announcements</strong> — music is deliberately ducked, not stopped, while the app speaks. If it stops entirely, start playback from the Music app before the run.</li>
+</ul>
+
+<h2>Refunds and purchases</h2>
+<p>RunOffline is a one-time purchase with no subscriptions and no in-app purchases. All payments, refunds and family sharing are handled by Apple — request a refund at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Reinstalling with the same Apple ID restores access; there is no separate restore step inside the app.</p>
+
+<div class="box">
+  <h2 style="margin-top:0">Contact us</h2>
+  <p>Email: <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a></p>
+  <p class="muted">To help us reproduce a problem quickly, please include: app version (Settings → About), iOS and watchOS version, device model, and what you did right before the issue. Bug reports and feature requests are read and answered.</p>
+</div>
+
+<p>Email: <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
+
+<footer>
+  <p>Studio name: Daibou007 Team<br>
+  Copyright: © 2026 Daibou007 Team. All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RunOffline — Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, "Helvetica Neue", sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; color: #1c1c1e; line-height: 1.6; }
+  h1 { font-size: 28px; } h2 { font-size: 20px; margin-top: 32px; }
+  .muted { color: #6e6e73; font-size: 14px; }
+  code { background: #f2f2f7; padding: 2px 6px; border-radius: 6px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; margin-top: 8px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e5ea; vertical-align: top; }
+  th { font-weight: 600; }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #e5e5ea; color: #6e6e73; font-size: 13px; }
+</style>
+</head>
+<body>
+<h1>Privacy Policy</h1>
+<p class="muted">Last updated: 2026-10-26 · Applies to: RunOffline: Running Log &amp; GPS (iOS 17+ and watchOS 10+)</p>
+
+<h2>Short version</h2>
+<p>RunOffline is an <strong>offline running log</strong>. It has no account, no advertising, no analytics and no third-party SDKs. Your runs, routes and settings live on your own device. Nothing is sent to us — there is no server of ours to send it to.</p>
+
+<h2>1. Who we are</h2>
+<p>RunOffline is published by <strong>Daibou007 Team</strong> ("we", "us"). For privacy questions, email <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a>.</p>
+<p>Because the app collects no personal data, we do not act as a data controller for any personal data collected through the app — there is none to process.</p>
+
+<h2>2. What the app stores on your device</h2>
+<p>RunOffline is built on an on-device database inside the app's sandbox. It stores:</p>
+<ul>
+  <li><strong>Workout records</strong> — start time, duration, distance, pace, per-kilometre splits, elevation, route coordinates, heart-rate samples (only if you grant Health access), cadence (only if enabled), workout type and any notes you add.</li>
+  <li><strong>Preferences</strong> — units, body weight, weekly goal, alert and metronome settings, appearance.</li>
+  <li><strong>Derived results</strong> — personal records and training-goal progress computed from your own runs.</li>
+  <li><strong>Recovery snapshot</strong> — if a recording is interrupted, a small snapshot is kept so the run can be recovered on next launch.</li>
+</ul>
+<p>This data is readable only by the app on your device. It is not uploaded to us.</p>
+
+<h2>3. What we collect</h2>
+<p><strong>Nothing.</strong> Specifically, the app contains:</p>
+<ul>
+  <li>No account, sign-in or user profile;</li>
+  <li>No analytics, crash-reporting or attribution SDK;</li>
+  <li>No advertising SDK, no advertising identifier (IDFA), no cross-app tracking;</li>
+  <li>No networking code of its own — the app does not open HTTP connections, so it cannot transmit your activity anywhere.</li>
+</ul>
+<p>We do not sell, rent or share personal information, and we do not use your data for advertising or marketing of any kind.</p>
+
+<h2>4. Permissions and what they are used for</h2>
+<table>
+  <tr><th>Permission</th><th>Why the app asks</th></tr>
+  <tr>
+    <td>Location<br><span class="muted">While Using + background during a run</span></td>
+    <td>To record your route, distance, pace and elevation, and to draw the map. Background location is used only while a run is being recorded — that is why the blue location indicator appears. Recording stops when you finish the run.</td>
+  </tr>
+  <tr>
+    <td>Motion &amp; Fitness</td>
+    <td>To read step cadence from the motion coprocessor. You can switch cadence tracking off in Settings → Metrics &amp; Display.</td>
+  </tr>
+  <tr>
+    <td>Health — read: heart rate</td>
+    <td>To show your heart rate while running, to draw the post-run heart-rate chart, to raise the heart-rate limit alert you configure, and to detect heart-rate drift (heat stress) between kilometre segments.</td>
+  </tr>
+  <tr>
+    <td>Health — write: workouts + heart rate<br><span class="muted">Apple Watch only</span></td>
+    <td>So runs recorded on the watch are saved as workouts in the Health app and count toward your activity rings.</td>
+  </tr>
+  <tr>
+    <td>Media &amp; Apple Music</td>
+    <td>To play music you already own while you run, and to lower its volume during voice announcements. The app never reads, stores or transmits your music library.</td>
+  </tr>
+  <tr>
+    <td>Notifications</td>
+    <td>To deliver hydration, break and safety reminders. These are scheduled locally on your device — no push server is involved.</td>
+  </tr>
+</table>
+<p>You can change or revoke any permission in iOS Settings at any time. Revoking location or motion stops the related measurement; revoking Health access simply means the app cannot read heart rate or save watch workouts.</p>
+
+<h2>5. Health data — extra limits</h2>
+<p>Health data accessed through HealthKit is used only for the running features described above. It is never used for advertising or marketing, never sold, and never shared with third parties. The app writes to Health only from the Apple Watch app and only when you record a workout there.</p>
+
+<h2>6. Optional iCloud backup</h2>
+<p>If you turn on iCloud backup, RunOffline writes a snapshot of your own data into the app's container in <strong>your private iCloud</strong> (<code>iCloud.com.daibou007.RunOffline</code>).</p>
+<ul>
+  <li>Up to <strong>7 rolling snapshots</strong> are kept; the oldest is deleted automatically when a new one is written.</li>
+  <li>The container belongs to your Apple ID. We have no access to it, cannot read it, and hold no copy. Storage and encryption are governed by Apple's iCloud terms.</li>
+  <li>You may optionally protect backups with a passphrase; they are then encrypted with AES-GCM before leaving the app, and the passphrase is kept in your device Keychain. <strong>If you lose that passphrase, neither you nor we can recover the backup.</strong></li>
+  <li>To remove iCloud copies, turn the feature off and delete the app's data, or manage the storage in iOS Settings → Apple ID → iCloud.</li>
+</ul>
+
+<h2>7. Exports you start yourself</h2>
+<p>Settings → Data lets you export a CSV summary, a full JSON backup or a GPX track. Exported files go wherever you send them with the system share sheet — Files, iCloud Drive, another app. Choosing a destination is entirely your decision, and the destination app's own privacy policy then applies. Encrypted backups never leave the device unencrypted.</p>
+
+<h2>8. Apple Watch, widgets, Live Activity and complications</h2>
+<p>The watch app can record a run independently. Data moves between iPhone and Apple Watch through Apple's WatchConnectivity framework, which transfers directly between your paired devices and is encrypted by the system — it does not pass through us. Widgets, complications and the Live Activity read a few hundred bytes of run summary (distance, pace, elapsed time) from a shared container on your device, so the Lock Screen, Dynamic Island and watch face can show it. Nothing in that summary leaves your device.</p>
+
+<h2>9. Retention and deletion</h2>
+<p>Your data stays until you delete it.</p>
+<ul>
+  <li>Delete a single run from its detail screen, or delete everything in Settings → Data.</li>
+  <li>Deleting the app removes all local data with it.</li>
+  <li>iCloud snapshots are separate: they remain until overwritten by newer snapshots or removed as described in section 6.</li>
+  <li>There is no server-side copy to request deletion of, because none exists.</li>
+</ul>
+
+<h2>10. Children</h2>
+<p>RunOffline is not directed at children under 13 (or under 16 in the EEA). We do not knowingly collect personal information from anyone, including children — there is no collection mechanism to do so. If you believe a child's data has somehow reached us, write to us and we will help.</p>
+
+<h2>11. Your rights (GDPR, UK GDPR, CCPA/CPRA)</h2>
+<p>Since we hold no personal data about you, there is nothing for us to disclose, correct, port or erase on our side. You keep full control locally:</p>
+<ul>
+  <li><strong>Access and portability</strong> — export everything as CSV, JSON or GPX at any time from Settings → Data.</li>
+  <li><strong>Erasure</strong> — delete individual runs or all data inside the app.</li>
+  <li><strong>No sale or sharing</strong> — we do not sell or share personal information, and we do not run targeted advertising.</li>
+</ul>
+<p>If you have a question about these rights, email <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a>.</p>
+
+<h2>12. Changes to this policy</h2>
+<p>If the app's data practices change — for example if a future version adds an online feature — this page will be updated before that version ships, and the date at the top will change. Significant changes will also be noted in the App Store release notes.</p>
+
+<h2>13. Contact</h2>
+<p>Email: <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a> · <a href="support.html">Support</a> · <a href="terms.html">Terms of Use</a></p>
+
+<footer>
+  <p>Studio name: Daibou007 Team<br>
+  Copyright: © 2026 Daibou007 Team. All rights reserved.</p>
+</footer>
+</body>
+</html>
