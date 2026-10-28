@@ -17,10 +17,10 @@
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<p class="muted">Last updated: 2026-10-26 · Applies to: RunOffline: Running Log &amp; GPS (iOS 17+ and watchOS 10+)</p>
+<p class="muted">Last updated: 2026-10-28 · Applies to: RunOffline: Running Log &amp; GPS (iOS 17+ and watchOS 10+)</p>
 
 <h2>Short version</h2>
-<p>RunOffline is an <strong>offline running log</strong>. It has no account, no advertising, no analytics and no third-party SDKs. Your runs, routes and settings live on your own device. Nothing is sent to us — there is no server of ours to send it to.</p>
+<p>RunOffline is an <strong>offline running log</strong> for iPhone and Apple Watch. It has no account, no advertising, no analytics and no third-party SDKs. Your runs, routes, training plan and settings live on your own device. Nothing is sent to us — there is no server of ours to send it to.</p>
 
 <h2>1. Who we are</h2>
 <p>RunOffline is published by <strong>Daibou007 Team</strong> ("we", "us"). For privacy questions, email <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a>.</p>
@@ -30,20 +30,23 @@
 <p>RunOffline is built on an on-device database inside the app's sandbox. It stores:</p>
 <ul>
   <li><strong>Workout records</strong> — start time, duration, distance, pace, per-kilometre splits, elevation, route coordinates, heart-rate samples (only if you grant Health access), cadence (only if enabled), workout type and any notes you add.</li>
-  <li><strong>Preferences</strong> — units, body weight, weekly goal, alert and metronome settings, appearance.</li>
-  <li><strong>Derived results</strong> — personal records and training-goal progress computed from your own runs.</li>
+  <li><strong>Training plan</strong> — planned sessions, target distance or duration, notes, local reminder times, completion links and your weekly and monthly distance goals.</li>
+  <li><strong>Preferences and local profile</strong> — units, body weight, goals, alert, metronome, appearance and map-blur settings, plus the optional display name and motto shown on your own share cards.</li>
+  <li><strong>Derived results</strong> — personal records, milestones and training-goal progress computed from your own runs.</li>
   <li><strong>Recovery snapshot</strong> — if a recording is interrupted, a small snapshot is kept so the run can be recovered on next launch.</li>
 </ul>
+<p>Share cards, replay videos and export files are created on demand. A photo you choose as a card background is held in memory while you compose the card and is not saved to the app's database; choosing from your library uses Apple's PHPicker, which does not give the app access to your photo library. Replay videos and exports are written to temporary app storage and handed to the iOS share sheet only when you choose a destination.</p>
 <p>This data is readable only by the app on your device. It is not uploaded to us.</p>
 
 <h2>3. What we collect</h2>
 <p><strong>Nothing.</strong> Specifically, the app contains:</p>
 <ul>
-  <li>No account, sign-in or user profile;</li>
+  <li>No account, sign-in or user profile on any server;</li>
   <li>No analytics, crash-reporting or attribution SDK;</li>
   <li>No advertising SDK, no advertising identifier (IDFA), no cross-app tracking;</li>
-  <li>No networking code of its own — the app does not open HTTP connections, so it cannot transmit your activity anywhere.</li>
+  <li>No networking code of its own — no URLSession, no API of ours, no web views.</li>
 </ul>
+<p>Some features rely on Apple system frameworks that may contact Apple on your behalf: map views and map snapshots use MapKit to fetch map tiles, optional iCloud backup uses your private iCloud, and the watch app uses WatchConnectivity between your paired devices. Those requests are handled by the system under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>; we receive no copy of the data. The Privacy, Terms, Support, App Store and Write a Review links open in Safari only when you tap them — the app does not load or track those pages itself.</p>
 <p>We do not sell, rent or share personal information, and we do not use your data for advertising or marketing of any kind.</p>
 
 <h2>4. Permissions and what they are used for</h2>
@@ -55,7 +58,7 @@
   </tr>
   <tr>
     <td>Motion &amp; Fitness</td>
-    <td>To read step cadence from the motion coprocessor. You can switch cadence tracking off in Settings → Metrics &amp; Display.</td>
+    <td>To read step cadence from the motion coprocessor, and to estimate distance from your steps when you record an indoor or treadmill run. You can switch cadence tracking off in Settings → Metrics &amp; Display.</td>
   </tr>
   <tr>
     <td>Health — read: heart rate</td>
@@ -66,12 +69,16 @@
     <td>So runs recorded on the watch are saved as workouts in the Health app and count toward your activity rings.</td>
   </tr>
   <tr>
+    <td>Camera<br><span class="muted">Optional</span></td>
+    <td>Only when you tap to take a photo for the background of a share card. The photo is used for that card and is not saved by the app. You can pick an existing photo instead without granting photo-library access.</td>
+  </tr>
+  <tr>
     <td>Media &amp; Apple Music</td>
     <td>To play music you already own while you run, and to lower its volume during voice announcements. The app never reads, stores or transmits your music library.</td>
   </tr>
   <tr>
     <td>Notifications</td>
-    <td>To deliver hydration, break and safety reminders. These are scheduled locally on your device — no push server is involved.</td>
+    <td>To deliver hydration, break, heart-rate-limit, heart-rate-drift and training-plan reminders. These are scheduled locally on your device — no push server is involved.</td>
   </tr>
 </table>
 <p>You can change or revoke any permission in iOS Settings at any time. Revoking location or motion stops the related measurement; revoking Health access simply means the app cannot read heart rate or save watch workouts.</p>
@@ -80,16 +87,16 @@
 <p>Health data accessed through HealthKit is used only for the running features described above. It is never used for advertising or marketing, never sold, and never shared with third parties. The app writes to Health only from the Apple Watch app and only when you record a workout there.</p>
 
 <h2>6. Optional iCloud backup</h2>
-<p>If you turn on iCloud backup, RunOffline writes a snapshot of your own data into the app's container in <strong>your private iCloud</strong> (<code>iCloud.com.daibou007.RunOffline</code>).</p>
+<p>If you turn on iCloud backup, RunOffline writes a snapshot of your own app data into the app's container in <strong>your private iCloud Drive</strong> (<code>iCloud.com.daibou007.RunOffline</code>, shown as RunOffline).</p>
 <ul>
   <li>Up to <strong>7 rolling snapshots</strong> are kept; the oldest is deleted automatically when a new one is written.</li>
   <li>The container belongs to your Apple ID. We have no access to it, cannot read it, and hold no copy. Storage and encryption are governed by Apple's iCloud terms.</li>
-  <li>You may optionally protect backups with a passphrase; they are then encrypted with AES-GCM before leaving the app, and the passphrase is kept in your device Keychain. <strong>If you lose that passphrase, neither you nor we can recover the backup.</strong></li>
-  <li>To remove iCloud copies, turn the feature off and delete the app's data, or manage the storage in iOS Settings → Apple ID → iCloud.</li>
+  <li>You may optionally protect backups with a passphrase; they are then encrypted with AES-256-GCM before leaving the app, and the passphrase is kept in your device Keychain. <strong>If you lose that passphrase, neither you nor we can recover the backup.</strong></li>
+  <li>To remove iCloud copies, use Delete in Settings → Data &amp; backup, or manage the storage in iOS Settings → Apple ID → iCloud.</li>
 </ul>
 
-<h2>7. Exports you start yourself</h2>
-<p>Settings → Data lets you export a CSV summary, a full JSON backup or a GPX track. Exported files go wherever you send them with the system share sheet — Files, iCloud Drive, another app. Choosing a destination is entirely your decision, and the destination app's own privacy policy then applies. Encrypted backups never leave the device unencrypted.</p>
+<h2>7. Exports and sharing you start yourself</h2>
+<p>Settings → Data &amp; backup lets you export a CSV summary or a full JSON backup. A single outdoor run can also be exported as a GPX track from its detail screen. Share cards and replay videos are rendered on your device. Everything leaves the app only through the system share sheet — Files, iCloud Drive, Photos, another app — so the destination is entirely your choice, and that destination's privacy policy then applies. Encrypted backups never leave the device unencrypted.</p>
 
 <h2>8. Apple Watch, widgets, Live Activity and complications</h2>
 <p>The watch app can record a run independently. Data moves between iPhone and Apple Watch through Apple's WatchConnectivity framework, which transfers directly between your paired devices and is encrypted by the system — it does not pass through us. Widgets, complications and the Live Activity read a few hundred bytes of run summary (distance, pace, elapsed time) from a shared container on your device, so the Lock Screen, Dynamic Island and watch face can show it. Nothing in that summary leaves your device.</p>
@@ -97,7 +104,8 @@
 <h2>9. Retention and deletion</h2>
 <p>Your data stays until you delete it.</p>
 <ul>
-  <li>Delete a single run from its detail screen, or delete everything in Settings → Data.</li>
+  <li>Delete a single run from its detail screen, or remove plan entries and goals in the Plan tab.</li>
+  <li>Delete everything on the device in Settings → Data &amp; backup.</li>
   <li>Deleting the app removes all local data with it.</li>
   <li>iCloud snapshots are separate: they remain until overwritten by newer snapshots or removed as described in section 6.</li>
   <li>There is no server-side copy to request deletion of, because none exists.</li>
@@ -109,8 +117,8 @@
 <h2>11. Your rights (GDPR, UK GDPR, CCPA/CPRA)</h2>
 <p>Since we hold no personal data about you, there is nothing for us to disclose, correct, port or erase on our side. You keep full control locally:</p>
 <ul>
-  <li><strong>Access and portability</strong> — export everything as CSV, JSON or GPX at any time from Settings → Data.</li>
-  <li><strong>Erasure</strong> — delete individual runs or all data inside the app.</li>
+  <li><strong>Access and portability</strong> — export a CSV summary or full JSON backup at any time from Settings → Data &amp; backup, and export individual tracks as GPX.</li>
+  <li><strong>Erasure</strong> — delete individual runs and plan entries, or all data inside the app.</li>
   <li><strong>No sale or sharing</strong> — we do not sell or share personal information, and we do not run targeted advertising.</li>
 </ul>
 <p>If you have a question about these rights, email <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a>.</p>

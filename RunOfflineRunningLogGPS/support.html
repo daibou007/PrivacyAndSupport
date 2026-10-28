@@ -15,32 +15,47 @@
 </head>
 <body>
 <h1>RunOffline Support</h1>
-<p class="muted">Last updated: 2026-10-26 · RunOffline: Running Log &amp; GPS · iOS 17+ / watchOS 10+ · no account, no ads, no upload</p>
+<p class="muted">Last updated: 2026-10-28 · RunOffline: Running Log &amp; GPS · iOS 17+ / watchOS 10+ · no account, no ads, no upload</p>
 
 <h2>Quick start</h2>
 <ol>
-  <li><strong>Allow location.</strong> On first launch, choose <em>While Using the App</em> and keep <em>Precise Location</em> on — without precise location, distance and pace will be noticeably short.</li>
-  <li><strong>Start a run.</strong> Pick a mode (Free / Steady / Intervals) and tap start. The 3-2-1 countdown is optional.</li>
+  <li><strong>Allow location and motion.</strong> On first launch, choose <em>While Using the App</em> and keep <em>Precise Location</em> on — without precise location, distance and pace will be noticeably short. Allow <em>Motion &amp; Fitness</em> for cadence and for indoor step distance.</li>
+  <li><strong>Start a run.</strong> Open the Start tab and pick a mode: <em>Free</em>, <em>Steady</em> (target pace with a tolerance) or <em>Intervals</em>. For a treadmill or indoor track, turn on <em>Indoor run</em>. The 3-2-1 countdown and the pre-run stretch are optional.</li>
   <li><strong>Keep the screen off.</strong> Recording continues in the background; the blue location pill confirms it. Distance and pace also appear on the Lock Screen and in the Dynamic Island if the Live Activity is enabled.</li>
-  <li><strong>Finish.</strong> Swipe to stop and save. The summary shows distance, pace, splits, elevation, heart rate and estimated calories.</li>
-  <li><strong>Review and export.</strong> Open the run from History for charts and splits; export CSV, JSON or GPX from Settings → Data.</li>
+  <li><strong>Finish.</strong> Hold the finish button to stop and save. The summary shows distance, pace, splits, elevation, heart rate, cadence and estimated calories, and offers the post-run stretch.</li>
+  <li><strong>Review and export.</strong> Open the run from History for charts, splits, replay and sharing. Stats shows records and milestones; Plan holds your goals and sessions. Data export lives in Settings → Data &amp; backup.</li>
 </ol>
+
+<h2>Plan and goals</h2>
+<p>The Plan tab keeps weekly and monthly distance goals with progress rings — tap <em>Edit training goals</em> to change them. Two built-in 4-week templates are available: <strong>5K Base</strong> and <strong>10K Build</strong>. Importing one adds its sessions starting next Monday, each with an 18:00 local reminder.</p>
+<p>You can also add your own sessions — Easy Run, Interval, Long Run, Cross Training or Rest — with a target distance or duration, a note and an optional reminder. A session is checked off automatically once you save a run on that day. Plan reminders need notification permission; without it the sessions still appear, but no reminder fires.</p>
+
+<h2>Stretching</h2>
+<p>Settings → Stretching library offers a <strong>7-move dynamic warm-up</strong> and an <strong>8-move static cool-down</strong>, 15 illustrated exercises in total. Each exercise has a short frame animation and written instructions; choose the male or female demonstration figure in Settings → Stretching library. The same routines are offered from the Start tab before a run and from the summary afterwards.</p>
+
+<h2>Replay, share cards and exports</h2>
+<ul>
+  <li><strong>Track replay</strong> — open an outdoor run and tap replay. The route redraws itself; you can export an <strong>8, 15 or 30 second MP4</strong> (1080 × 1920, 30 fps) and send it with the share sheet.</li>
+  <li><strong>Share cards</strong> — five styles (Aurora, Midnight, Paper, Map Focus, Vivid). You can add your own photo as the background by taking one or picking one with the system photo picker. If <em>Blur maps (privacy)</em> is on, streets and landmarks are hidden on route views and share cards.</li>
+  <li><strong>Export</strong> — Settings → Data &amp; backup exports a CSV summary or a full JSON backup; an individual outdoor run can be exported as GPX from its detail screen. Files leave only through the system share sheet, so you choose the destination.</li>
+</ul>
+<p>Indoor runs have no route, so replay, GPX export and the map on share cards are unavailable for them.</p>
 
 <h2>Heart rate and alerts</h2>
 <p>Heart rate requires an Apple Watch that is recording the run, plus Health permission. iOS never tells an app whether read access was granted, so if numbers stay empty, check the Health app → Sharing → Apps → RunOffline, and confirm the watch is actually worn and recording.</p>
 <p>The heart-rate limit alert fires only after your heart rate has stayed at or above the limit you set for <strong>60 seconds</strong>, and then goes quiet for 5 minutes before it can fire again — this prevents buzzing on every hard effort. Heart-rate drift (heat stress) compares per-kilometre averages. Both are coaching hints, not medical measurements.</p>
 
 <h2>Apple Watch</h2>
-<p>Install the watch app from the Watch app on your iPhone. Settings configured on the phone (units, heart-rate limit, steady-pace target, interval presets) are pushed to the watch. The watch records independently, so you can leave the phone at home; runs transfer to the phone over WatchConnectivity when the two are near each other again. If a run seems missing on the phone, open the app on both devices and keep them close for a minute.</p>
+<p>Install the watch app from the Watch app on your iPhone. Settings configured on the phone (units, heart-rate limit, steady-pace target, interval presets) are pushed to the watch. The watch records independently, so you can leave the phone at home; runs transfer to the phone over WatchConnectivity when the two are near each other again. Workouts recorded on the watch are also saved to the Health app. If a run seems missing on the phone, open the app on both devices and keep them close for a minute.</p>
 
 <h2>Backup and restore</h2>
-<p>Settings → Data offers three ways to get your data out:</p>
+<p>Settings → Data &amp; backup offers three ways to protect or move your data:</p>
 <ul>
   <li><strong>CSV summary</strong> — one row per run, for spreadsheets.</li>
   <li><strong>Full backup (JSON)</strong> — everything, restorable inside the app with either <em>Merge</em> or <em>Replace All</em>.</li>
-  <li><strong>GPX</strong> — a single track that imports into Strava, Nike Run Club, adidas Running and other services.</li>
+  <li><strong>iCloud backup</strong> — automatic snapshots in your own private iCloud Drive, with the newest 7 kept. Snapshots can be passphrase-protected with AES-256-GCM; the passphrase is stored in your Keychain and <strong>cannot be recovered if lost</strong> — write it down somewhere safe.</li>
 </ul>
-<p>If you enable iCloud backup, up to 7 rolling snapshots are kept in your own private iCloud. Backups can be passphrase-protected; the passphrase is stored in your Keychain and <strong>cannot be recovered if lost</strong> — write it down somewhere safe.</p>
+<p>GPX is exported per run from the run's detail screen. GPX files import into Strava, Nike Run Club, adidas Running and other services.</p>
 
 <h2>Widgets, complications and Live Activity</h2>
 <p>Add the widget from the Home Screen or Lock Screen gallery, or as a complication on your watch face. If the Live Activity is turned off in Settings → Metrics &amp; Display, nothing appears on the Lock Screen or in the Dynamic Island while running. Widgets refresh roughly every 30 minutes and immediately after a run is saved — they are not a live readout during a run.</p>
@@ -51,11 +66,16 @@
 <h2>Troubleshooting</h2>
 <ul>
   <li><strong>Distance is too short or the route jumps</strong> — check that Precise Location is on (iOS Settings → RunOffline → Location). Wait for the GPS to settle for 10–20 seconds before starting, and expect drift in the first few hundred metres in cities or under trees.</li>
+  <li><strong>Indoor distance looks wrong</strong> — indoor mode estimates distance from your step count, so arm movement and stride length affect it. After saving, you can enter the treadmill console distance on the summary to correct the record.</li>
   <li><strong>No cadence shown</strong> — cadence tracking is off, or Motion &amp; Fitness permission was denied. Turn it on in Settings → Metrics &amp; Display, then re-grant in iOS Settings.</li>
-  <li><strong>No reminders</strong> — notifications were denied. Settings → Permissions shows the current status and a shortcut to iOS Settings.</li>
+  <li><strong>No reminders</strong> — notifications were denied. Settings → Permissions shows the current status and a shortcut to iOS Settings. Plan reminders also require notification permission; they fire at 18:00 local time.</li>
   <li><strong>The app was force-quit mid-run</strong> — relaunch it; the interrupted recording is offered for recovery.</li>
   <li><strong>Calories look high or low</strong> — the estimate uses the ACSM running equation with your speed and body weight. Check your weight in Settings → Profile, and note that "Gross" also adds resting metabolism.</li>
   <li><strong>Music stops during announcements</strong> — music is deliberately ducked, not stopped, while the app speaks. If it stops entirely, start playback from the Music app before the run.</li>
+  <li><strong>No map, replay or GPX for a run</strong> — the run was recorded in indoor mode and has no route data. This is expected.</li>
+  <li><strong>Share-card camera is unavailable</strong> — the device has no camera (for example, the simulator). Pick a photo from the library instead.</li>
+  <li><strong>iCloud backup is unavailable</strong> — sign in to iCloud and make sure iCloud Drive is on. The app works fully without iCloud.</li>
+  <li><strong>A watch run has not appeared on the phone</strong> — open RunOffline on both devices and keep them close; transfers resume when the connection returns.</li>
 </ul>
 
 <h2>Refunds and purchases</h2>
@@ -64,7 +84,7 @@
 <div class="box">
   <h2 style="margin-top:0">Contact us</h2>
   <p>Email: <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a></p>
-  <p class="muted">To help us reproduce a problem quickly, please include: app version (Settings → About), iOS and watchOS version, device model, and what you did right before the issue. Bug reports and feature requests are read and answered.</p>
+  <p class="muted">To help us reproduce a problem quickly, please include: app version (Settings → About RunOffline), iOS and watchOS version, device model, and what you did right before the issue. Bug reports and feature requests are read and answered.</p>
 </div>
 
 <p>Email: <a href="mailto:daibou007@gmail.com">daibou007@gmail.com</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
